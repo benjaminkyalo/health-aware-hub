@@ -94,13 +94,13 @@ const StatsSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 bg-primary text-primary-foreground">
+    <section ref={sectionRef} className="py-20 bg-cyan-600 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Making a Difference in Public Health
           </h2>
-          <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">
             Trusted by millions for reliable health information and expert guidance.
           </p>
         </div>
@@ -109,16 +109,16 @@ const StatsSection = () => {
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
-              <Card key={index} className="bg-primary-foreground/10 border-primary-foreground/20 text-center">
+              <Card key={index} className="bg-white/10 border-white/20 text-center backdrop-blur-sm">
                 <CardContent className="p-8">
-                  <IconComponent className="h-12 w-12 mx-auto mb-4 text-primary-foreground" />
-                  <div className="text-4xl font-bold mb-2 text-primary-foreground">
+                  <IconComponent className="h-12 w-12 mx-auto mb-4 text-white" />
+                  <div className="text-4xl font-bold mb-2 text-white">
                     <CountUp end={stat.number} suffix={stat.suffix} />
                   </div>
-                  <div className="text-xl font-semibold mb-2 text-primary-foreground">
+                  <div className="text-xl font-semibold mb-2 text-white">
                     {stat.label}
                   </div>
-                  <p className="text-sm text-primary-foreground/80">
+                  <p className="text-sm text-white/80">
                     {stat.description}
                   </p>
                 </CardContent>

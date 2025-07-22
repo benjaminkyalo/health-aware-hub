@@ -31,16 +31,16 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-slate-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand and Description */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl font-bold text-background mb-4">
+            <h3 className="text-2xl font-bold text-white mb-4">
               Health Aware Hub
             </h3>
-            <p className="text-background/80 mb-6 text-sm">
+            <p className="text-white/80 mb-6 text-sm">
               Your trusted source for evidence-based health information, 
               disease prevention guidance, and wellness education from 
               leading medical professionals.
@@ -48,15 +48,15 @@ const Footer = () => {
             
             {/* Contact Info */}
             <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-2 text-background/80">
+              <div className="flex items-center gap-2 text-white/80">
                 <Mail className="h-4 w-4" />
                 <span>contact@healthawarehub.com</span>
               </div>
-              <div className="flex items-center gap-2 text-background/80">
+              <div className="flex items-center gap-2 text-white/80">
                 <Phone className="h-4 w-4" />
                 <span>1-800-HEALTH-1</span>
               </div>
-              <div className="flex items-center gap-2 text-background/80">
+              <div className="flex items-center gap-2 text-white/80">
                 <MapPin className="h-4 w-4" />
                 <span>Health Education Center, USA</span>
               </div>
@@ -65,7 +65,7 @@ const Footer = () => {
 
           {/* Health Topics */}
           <div>
-            <h4 className="text-lg font-semibold text-background mb-4">
+            <h4 className="text-lg font-semibold text-white mb-4">
               Health Topics
             </h4>
             <ul className="space-y-2">
@@ -73,7 +73,7 @@ const Footer = () => {
                 <li key={topic.name}>
                   <a 
                     href={topic.href} 
-                    className="text-background/80 hover:text-background transition-colors text-sm"
+                    className="text-white/80 hover:text-white transition-colors text-sm"
                   >
                     {topic.name}
                   </a>
@@ -84,7 +84,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-background mb-4">
+            <h4 className="text-lg font-semibold text-white mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2">
@@ -92,7 +92,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a 
                     href={link.href} 
-                    className="text-background/80 hover:text-background transition-colors text-sm"
+                    className="text-white/80 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -103,20 +103,20 @@ const Footer = () => {
 
           {/* Newsletter Signup */}
           <div>
-            <h4 className="text-lg font-semibold text-background mb-4">
+            <h4 className="text-lg font-semibold text-white mb-4">
               Stay Updated
             </h4>
-            <p className="text-background/80 mb-4 text-sm">
+            <p className="text-white/80 mb-4 text-sm">
               Subscribe to our newsletter for the latest health insights and tips.
             </p>
             <div className="space-y-3">
               <Input 
                 type="email" 
                 placeholder="Your email address" 
-                className="bg-background/10 border-background/20 text-background placeholder:text-background/60"
+                className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
               />
               <Button 
-                className="w-full bg-primary text-primary-foreground hover:bg-primary-glow"
+                className="w-full bg-cyan-600 text-white hover:bg-cyan-700"
               >
                 Subscribe
               </Button>
@@ -125,22 +125,22 @@ const Footer = () => {
         </div>
 
         {/* Social Media and Legal */}
-        <div className="py-8 border-t border-background/20">
+        <div className="py-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Social Media */}
             <div className="flex items-center gap-4">
-              <span className="text-background/80 text-sm">Follow us:</span>
+              <span className="text-white/80 text-sm">Follow us:</span>
               <div className="flex gap-3">
-                <a href="#" className="text-background/60 hover:text-background transition-colors">
+                <a href="#" className="text-white/60 hover:text-white transition-colors">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-background/60 hover:text-background transition-colors">
+                <a href="#" className="text-white/60 hover:text-white transition-colors">
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-background/60 hover:text-background transition-colors">
+                <a href="#" className="text-white/60 hover:text-white transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-background/60 hover:text-background transition-colors">
+                <a href="#" className="text-white/60 hover:text-white transition-colors">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </div>
@@ -152,12 +152,12 @@ const Footer = () => {
                 <span key={link.name} className="flex items-center">
                   <a 
                     href={link.href} 
-                    className="text-background/80 hover:text-background transition-colors"
+                    className="text-white/80 hover:text-white transition-colors"
                   >
                     {link.name}
                   </a>
                   {index < legalLinks.length - 1 && (
-                    <span className="text-background/40 ml-4">|</span>
+                    <span className="text-white/40 ml-4">|</span>
                   )}
                 </span>
               ))}
@@ -166,11 +166,11 @@ const Footer = () => {
         </div>
 
         {/* Copyright and Disclaimer */}
-        <div className="py-6 border-t border-background/20 text-center space-y-2">
-          <p className="text-background/80 text-sm">
+        <div className="py-6 border-t border-white/20 text-center space-y-2">
+          <p className="text-white/80 text-sm">
             © {currentYear} Health Aware Hub. All rights reserved.
           </p>
-          <p className="text-background/60 text-xs max-w-4xl mx-auto">
+          <p className="text-white/60 text-xs max-w-4xl mx-auto">
             <strong>Medical Disclaimer:</strong> The information provided on this website is for educational purposes only 
             and is not intended as a substitute for professional medical advice, diagnosis, or treatment. 
             Always seek the advice of your physician or other qualified health provider with any questions 

@@ -2,7 +2,6 @@
 
 @layer base {
   :root {
-    /* All your CSS variables (unchanged) */
     --background: 0 0% 100%;
     --foreground: 210 22% 22%;
     --primary: 197 100% 36%;
@@ -45,6 +44,35 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  .dark {
+    --background: 210 22% 10%;
+    --foreground: 0 0% 100%;
+    --primary: 197 100% 66%;
+    --primary-foreground: 210 22% 10%;
+    --primary-light: 197 100% 85%;
+    --primary-glow: 197 100% 75%;
+    --secondary: 210 22% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --card: 210 22% 15%;
+    --card-foreground: 0 0% 100%;
+    --card-hover: 210 22% 25%;
+    --muted: 210 22% 20%;
+    --muted-foreground: 214 32% 80%;
+    --accent: 210 22% 25%;
+    --accent-foreground: 0 0% 100%;
+    --border: 210 22% 30%;
+    --input: 210 22% 25%;
+    --ring: 197 100% 66%;
+    --sidebar-background: 210 22% 10%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 210 22% 20%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 22% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 22% 30%;
+    --sidebar-ring: 197 100% 66%;
+  }
+
   *, ::before, ::after {
     border-color: hsl(var(--border));
   }
@@ -52,7 +80,7 @@
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: theme('fontFamily.sans');
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
   }
@@ -62,33 +90,64 @@
     font-weight: 600;
   }
 
-  h1 { font-size: 2.25rem; line-height: 2.5rem; }
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
   @media (min-width: 1024px) {
-    h1 { font-size: 3rem; line-height: 1; }
+    h1 {
+      font-size: 3rem;
+      line-height: 1;
+    }
   }
 
-  h2 { font-size: 1.875rem; line-height: 2.25rem; }
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
   @media (min-width: 1024px) {
-    h2 { font-size: 2.25rem; }
+    h2 {
+      font-size: 2.25rem;
+    }
   }
 
-  h3 { font-size: 1.5rem; line-height: 2rem; }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
   @media (min-width: 1024px) {
-    h3 { font-size: 1.875rem; }
+    h3 {
+      font-size: 1.875rem;
+    }
   }
 
-  h4 { font-size: 1.25rem; line-height: 1.75rem; }
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
   @media (min-width: 1024px) {
-    h4 { font-size: 1.5rem; }
+    h4 {
+      font-size: 1.5rem;
+    }
   }
 
-  h5 { font-size: 1.125rem; line-height: 1.75rem; }
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
   @media (min-width: 1024px) {
-    h5 { font-size: 1.25rem; }
+    h5 {
+      font-size: 1.25rem;
+    }
   }
 
-  h6 { font-size: 1rem; line-height: 1.5rem; }
+  h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
   @media (min-width: 1024px) {
-    h6 { font-size: 1.125rem; }
+    h6 {
+      font-size: 1.125rem;
+    }
   }
 }

@@ -56,13 +56,13 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 section-accent">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Trusted by Healthcare Professionals
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             See what healthcare professionals and patients are saying about our platform.
           </p>
         </div>
@@ -77,7 +77,7 @@ const TestimonialsSection = () => {
           <CarouselContent className="-ml-2 md:-ml-4">
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="health-card h-full">
+                <Card className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow h-full">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-1 mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
@@ -86,23 +86,23 @@ const TestimonialsSection = () => {
                     </div>
                     
                     <div className="relative mb-6">
-                      <Quote className="h-8 w-8 text-primary/20 absolute -top-2 -left-2" />
-                      <p className="text-muted-foreground italic pl-6">
+                      <Quote className="h-8 w-8 text-cyan-600/20 absolute -top-2 -left-2" />
+                      <p className="text-gray-600 italic pl-6">
                         "{testimonial.content}"
                       </p>
                     </div>
                     
                     <div className="flex items-center gap-3">
                       <Avatar className="h-12 w-12">
-                        <AvatarFallback className="bg-primary text-primary-foreground">
+                        <AvatarFallback className="bg-cyan-600 text-white">
                           {testimonial.initials}
                         </AvatarFallback>
                       </Avatar>
                       <div>
-                        <div className="font-semibold text-foreground">
+                        <div className="font-semibold text-gray-900">
                           {testimonial.name}
                         </div>
-                        <div className="text-sm text-muted-foreground">
+                        <div className="text-sm text-gray-600">
                           {testimonial.role}
                         </div>
                       </div>
