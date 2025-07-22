@@ -25,19 +25,19 @@ const MissionStatement = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold medical-heading mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
             Our Commitment to Your Health
           </h2>
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg medical-body mb-8">
+            <p className="text-lg text-slate-700 mb-8 leading-relaxed">
               Health Aware Hub is a trusted medical education platform dedicated to creating public awareness 
               about common diseases and health conditions. We believe that informed patients make better health decisions, 
               and our mission is to provide accurate, accessible, and actionable health information to communities worldwide.
             </p>
-            <p className="text-lg medical-text-light">
+            <p className="text-lg text-slate-600 leading-relaxed">
               Our platform bridges the gap between complex medical information and public understanding, 
               making healthcare knowledge accessible to everyone, regardless of their medical background.
             </p>
@@ -49,13 +49,13 @@ const MissionStatement = () => {
             const IconComponent = value.icon;
             return (
               <div key={index} className="text-center">
-                <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <IconComponent className="h-8 w-8 text-primary" />
+                <div className="mx-auto w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4 shadow-sm">
+                  <IconComponent className="h-8 w-8 text-teal-600" />
                 </div>
-                <h3 className="text-lg font-semibold medical-heading mb-3">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">
                   {value.title}
                 </h3>
-                <p className="medical-text-light leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -63,11 +63,11 @@ const MissionStatement = () => {
           })}
         </div>
 
-        <div className="mt-16 bg-secondary rounded-lg p-8 text-center">
-          <h3 className="text-2xl font-semibold medical-heading mb-4">
+        <div className="mt-16 bg-gradient-to-r from-teal-50 to-cyan-50 border border-teal-200 rounded-lg p-8 text-center shadow-sm">
+          <h3 className="text-2xl font-semibold text-slate-800 mb-4">
             Medical Disclaimer
           </h3>
-          <p className="medical-text-light leading-relaxed max-w-4xl mx-auto">
+          <p className="text-slate-700 leading-relaxed max-w-4xl mx-auto">
             The information provided on Health Aware Hub is for educational purposes only and is not intended 
             to replace professional medical advice, diagnosis, or treatment. Always seek the advice of qualified 
             healthcare providers with any questions you may have regarding a medical condition. Never disregard 

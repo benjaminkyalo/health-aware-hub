@@ -4,6 +4,7 @@ import StatsSection from '../components/StatsSection';
 import Footer from '../components/Footer';
 import MissionStatement from '../components/MissionStatement';
 import TestimonialsSection from '../components/TestimonialsSection';
+import DiseasePreview from '../components/DiseasePreview';
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <HeroSection />
       <StatsSection />
       <MissionStatement />
+      <DiseasePreview />
       <TestimonialsSection />
       <Footer />
     </div>
