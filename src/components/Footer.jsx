@@ -1,0 +1,185 @@
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const healthTopics = [
+    { name: 'HIV & AIDS', href: '#hiv-aids' },
+    { name: 'Diabetes', href: '#diabetes' },
+    { name: 'Obesity', href: '#obesity' },
+    { name: 'Cancer', href: '#cancer' },
+    { name: 'Depression', href: '#depression' },
+    { name: 'High Blood Pressure', href: '#hypertension' },
+  ];
+
+  const quickLinks = [
+    { name: 'About Us', href: '#about' },
+    { name: 'Blog', href: '#blog' },
+    { name: 'Contact', href: '#contact' },
+    { name: 'Resources', href: '#resources' },
+    { name: 'Health Screening', href: '#screening' },
+    { name: 'Expert Consultation', href: '#consultation' },
+  ];
+
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '#privacy' },
+    { name: 'Terms of Use', href: '#terms' },
+    { name: 'Medical Disclaimer', href: '#disclaimer' },
+    { name: 'Accessibility', href: '#accessibility' },
+  ];
+
+  return (
+    <footer className="bg-foreground text-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main Footer Content */}
+        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Brand and Description */}
+          <div className="lg:col-span-1">
+            <h3 className="text-2xl font-bold text-background mb-4">
+              Health Aware Hub
+            </h3>
+            <p className="text-background/80 mb-6 text-sm">
+              Your trusted source for evidence-based health information, 
+              disease prevention guidance, and wellness education from 
+              leading medical professionals.
+            </p>
+            
+            {/* Contact Info */}
+            <div className="space-y-2 text-sm">
+              <div className="flex items-center gap-2 text-background/80">
+                <Mail className="h-4 w-4" />
+                <span>contact@healthawarehub.com</span>
+              </div>
+              <div className="flex items-center gap-2 text-background/80">
+                <Phone className="h-4 w-4" />
+                <span>1-800-HEALTH-1</span>
+              </div>
+              <div className="flex items-center gap-2 text-background/80">
+                <MapPin className="h-4 w-4" />
+                <span>Health Education Center, USA</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Health Topics */}
+          <div>
+            <h4 className="text-lg font-semibold text-background mb-4">
+              Health Topics
+            </h4>
+            <ul className="space-y-2">
+              {healthTopics.map((topic) => (
+                <li key={topic.name}>
+                  <a 
+                    href={topic.href} 
+                    className="text-background/80 hover:text-background transition-colors text-sm"
+                  >
+                    {topic.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold text-background mb-4">
+              Quick Links
+            </h4>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <a 
+                    href={link.href} 
+                    className="text-background/80 hover:text-background transition-colors text-sm"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div>
+            <h4 className="text-lg font-semibold text-background mb-4">
+              Stay Updated
+            </h4>
+            <p className="text-background/80 mb-4 text-sm">
+              Subscribe to our newsletter for the latest health insights and tips.
+            </p>
+            <div className="space-y-3">
+              <Input 
+                type="email" 
+                placeholder="Your email address" 
+                className="bg-background/10 border-background/20 text-background placeholder:text-background/60"
+              />
+              <Button 
+                className="w-full bg-primary text-primary-foreground hover:bg-primary-glow"
+              >
+                Subscribe
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Social Media and Legal */}
+        <div className="py-8 border-t border-background/20">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            {/* Social Media */}
+            <div className="flex items-center gap-4">
+              <span className="text-background/80 text-sm">Follow us:</span>
+              <div className="flex gap-3">
+                <a href="#" className="text-background/60 hover:text-background transition-colors">
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-background/60 hover:text-background transition-colors">
+                  <Twitter className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-background/60 hover:text-background transition-colors">
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-background/60 hover:text-background transition-colors">
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Legal Links */}
+            <div className="flex flex-wrap gap-4 text-sm">
+              {legalLinks.map((link, index) => (
+                <span key={link.name} className="flex items-center">
+                  <a 
+                    href={link.href} 
+                    className="text-background/80 hover:text-background transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                  {index < legalLinks.length - 1 && (
+                    <span className="text-background/40 ml-4">|</span>
+                  )}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Copyright and Disclaimer */}
+        <div className="py-6 border-t border-background/20 text-center space-y-2">
+          <p className="text-background/80 text-sm">
+            © {currentYear} Health Aware Hub. All rights reserved.
+          </p>
+          <p className="text-background/60 text-xs max-w-4xl mx-auto">
+            <strong>Medical Disclaimer:</strong> The information provided on this website is for educational purposes only 
+            and is not intended as a substitute for professional medical advice, diagnosis, or treatment. 
+            Always seek the advice of your physician or other qualified health provider with any questions 
+            you may have regarding a medical condition.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
