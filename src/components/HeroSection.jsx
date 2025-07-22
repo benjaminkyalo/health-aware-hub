@@ -30,7 +30,7 @@ const HeroSection = () => {
   }, [slides.length]);
 
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
       {/* Hero Background Slides */}
       {slides.map((slide, index) => (
         <div
@@ -63,22 +63,22 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center">
-          <Card className="health-card max-w-2xl text-center bg-background/95 backdrop-blur-sm">
+          <Card className="max-w-2xl text-center bg-white/95 backdrop-blur-sm shadow-2xl border-0">
             <div className="p-8 lg:p-12">
-              <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="text-4xl lg:text-6xl font-bold text-slate-800 mb-6">
                 Health Aware Hub
               </h1>
-              <p className="text-lg lg:text-xl text-muted-foreground mb-4">
+              <p className="text-lg lg:text-xl text-slate-600 mb-4 font-medium">
                 Trusted by American Health Researchers and Experts
               </p>
-              <p className="text-base lg:text-lg text-muted-foreground mb-8">
+              <p className="text-base lg:text-lg text-slate-600 mb-8 leading-relaxed">
                 Your comprehensive resource for evidence-based health information, 
                 disease prevention, and wellness education from leading medical professionals.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  className="btn-hero text-lg px-8 py-4"
+                  className="bg-cyan-500 hover:bg-cyan-600 text-white text-lg px-8 py-4 rounded-lg font-semibold shadow-lg transition-all duration-200 hover:shadow-xl"
                   onClick={() =>
                     document.getElementById('topics')?.scrollIntoView({ behavior: 'smooth' })
                   }
@@ -87,7 +87,7 @@ const HeroSection = () => {
                 </Button>
                 <Button
                   variant="outline"
-                  className="btn-outline-health text-lg px-8 py-4"
+                  className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 text-lg px-8 py-4 rounded-lg font-semibold transition-all duration-200"
                   onClick={() =>
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
                   }
