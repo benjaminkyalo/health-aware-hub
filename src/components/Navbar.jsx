@@ -83,7 +83,8 @@ const Navbar = () => {
             </a>
 
             <Button className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
-              Consult Doctor
+              <a href="/homepage" className="flex items-center space-x-2">Consult Doctor</a>
+              
             </Button>
           </div>
 

@@ -14,6 +14,9 @@ import Cancer from "./pages/diseases/Cancer";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import DoctorDiscovery from "./pages/DoctorDiscovery";
+import BookingConsultation from "./pages/BookingConsultation";
+import Homepage from "./pages/Homepage";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +31,11 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+
+
+          <Route path="/homepage" element={<Homepage />} />
+          <Route path="/doctor-discovery" element={<DoctorDiscovery />} />
+          <Route path="/booking/:doctorId" element={<BookingConsultation />} />
 
           {/* Disease Pages */}
           <Route path="/diseases/diabetes" element={<Diabetes />} />

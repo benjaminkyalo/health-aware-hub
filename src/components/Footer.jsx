@@ -6,13 +6,18 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  // Function to scroll to top when links are clicked
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  };
+
   const healthTopics = [
-    { name: 'HIV & AIDS', href: '/hiv-aids' },
-    { name: 'Diabetes', href: '/diabetes' },
-    { name: 'Obesity', href: '/obesity' },
-    { name: 'Cancer', href: '/cancer' },
-    { name: 'Depression', href: '/depression' },
-    { name: 'High Blood Pressure', href: '/hypertension' },
+    { name: 'HIV & AIDS', path: '/diseases/hiv-aids' },
+    { name: 'Diabetes', path: '/diseases/diabetes' },
+    { name: 'Obesity', path: '/diseases/obesity' },
+    { name: 'Cancer', path: '/diseases/cancer' },
+    { name: 'Depression', path: '/diseases/depression' },
+    { name: 'High Blood Pressure', path: '/diseases/hypertension' },
   ];
 
   const quickLinks = [
@@ -53,10 +58,7 @@ const Footer = () => {
                 <Mail className="h-4 w-4" />
                 <span>contact@healthawarehub.com</span>
               </div>
-              <div className="flex items-center gap-2 text-white/80">
-                <Phone className="h-4 w-4" />
-                <span>1-800-HEALTH-1</span>
-              </div>
+              
               <div className="flex items-center gap-2 text-white/80">
                 <MapPin className="h-4 w-4" />
                 <span>Health Education Center, USA</span>
@@ -70,13 +72,14 @@ const Footer = () => {
               Health Topics
             </h4>
             <ul className="space-y-2">
-              {healthTopics.map((topic) => (
-                <li key={topic.name}>
+              {healthTopics.map((disease) => (
+                <li key={disease.name}>
                   <Link 
-                    to={topic.href} 
-                    className="text-white/80 hover:text-white transition-colors text-sm"
+                    to={disease.path}
+                    onClick={scrollToTop}
+                    
                   >
-                    {topic.name}
+                    {disease.name}
                   </Link>
                 </li>
               ))}
@@ -92,7 +95,8 @@ const Footer = () => {
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link 
-                    to={link.href} 
+                    to={link.href}
+                    onClick={scrollToTop}
                     className="text-white/80 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
@@ -152,7 +156,8 @@ const Footer = () => {
               {legalLinks.map((link, index) => (
                 <span key={link.name} className="flex items-center">
                   <Link 
-                    to={link.href} 
+                    to={link.href}
+                    onClick={scrollToTop}
                     className="text-white/80 hover:text-white transition-colors"
                   >
                     {link.name}

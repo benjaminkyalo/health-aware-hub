@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset scroll position */
+body {
+    scroll-behavior: auto;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
