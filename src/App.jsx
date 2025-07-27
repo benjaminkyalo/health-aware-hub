@@ -9,8 +9,11 @@ import Diabetes from "./pages/diseases/Diabetes";
 import Hypertension from "./pages/diseases/Hypertension";
 import HivAids  from "./pages/diseases/HivAids";
 import Depression from "./pages/diseases/Depression";
-
-
+import Obesity from "./pages/diseases/Obesity";
+import Cancer from "./pages/diseases/Cancer";
+import About from "./pages/About";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -22,10 +25,17 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+
+          {/* Disease Pages */}
           <Route path="/diseases/diabetes" element={<Diabetes />} />
           <Route path="/diseases/hypertension" element={<Hypertension />} />
           <Route path="/diseases/hiv-aids" element={<HivAids />} />
           <Route path="/diseases/depression" element={<Depression />} />
+          <Route path="/diseases/obesity" element={<Obesity />} />
+          <Route path="/diseases/cancer" element={<Cancer />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

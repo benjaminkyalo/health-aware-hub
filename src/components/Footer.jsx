@@ -1,33 +1,34 @@
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'; 
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const healthTopics = [
-    { name: 'HIV & AIDS', href: '#hiv-aids' },
-    { name: 'Diabetes', href: '#diabetes' },
-    { name: 'Obesity', href: '#obesity' },
-    { name: 'Cancer', href: '#cancer' },
-    { name: 'Depression', href: '#depression' },
-    { name: 'High Blood Pressure', href: '#hypertension' },
+    { name: 'HIV & AIDS', href: '/hiv-aids' },
+    { name: 'Diabetes', href: '/diabetes' },
+    { name: 'Obesity', href: '/obesity' },
+    { name: 'Cancer', href: '/cancer' },
+    { name: 'Depression', href: '/depression' },
+    { name: 'High Blood Pressure', href: '/hypertension' },
   ];
 
   const quickLinks = [
-    { name: 'About Us', href: '#about' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
-    { name: 'Resources', href: '#resources' },
-    { name: 'Health Screening', href: '#screening' },
-    { name: 'Expert Consultation', href: '#consultation' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Health Screening', href: '/screening' },
+    { name: 'Expert Consultation', href: '/consultation' },
   ];
 
   const legalLinks = [
-    { name: 'Privacy Policy', href: '#privacy' },
-    { name: 'Terms of Use', href: '#terms' },
-    { name: 'Medical Disclaimer', href: '#disclaimer' },
-    { name: 'Accessibility', href: '#accessibility' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Use', href: '/terms' },
+    { name: 'Medical Disclaimer', href: '/disclaimer' },
+    { name: 'Accessibility', href: '/accessibility' },
   ];
 
   return (
@@ -71,12 +72,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {healthTopics.map((topic) => (
                 <li key={topic.name}>
-                  <a 
-                    href={topic.href} 
+                  <Link 
+                    to={topic.href} 
                     className="text-white/80 hover:text-white transition-colors text-sm"
                   >
                     {topic.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -90,12 +91,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href} 
+                  <Link 
+                    to={link.href} 
                     className="text-white/80 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -150,12 +151,12 @@ const Footer = () => {
             <div className="flex flex-wrap gap-4 text-sm">
               {legalLinks.map((link, index) => (
                 <span key={link.name} className="flex items-center">
-                  <a 
-                    href={link.href} 
+                  <Link 
+                    to={link.href} 
                     className="text-white/80 hover:text-white transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                   {index < legalLinks.length - 1 && (
                     <span className="text-white/40 ml-4">|</span>
                   )}
