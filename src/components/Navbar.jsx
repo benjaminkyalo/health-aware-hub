@@ -12,7 +12,7 @@ const Navbar = () => {
     { name: 'Obesity', path: '/diseases/obesity' },
     { name: 'Cancer', path: '/diseases/cancer' },
     { name: 'Depression', path: '/diseases/depression' },
-    { name: 'High Blood Pressure', path: '/diseases/high-blood-pressure' },
+    { name: 'High Blood Pressure', path: '/diseases/hypertension' },
   ];
 
   return (

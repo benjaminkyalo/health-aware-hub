@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Calendar, AlertCircle, Heart, Activity } from 'lucide-react';
+import { ArrowLeft, Calendar, AlertCircle, Heart, Activity,  Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Diabetes = () => {
@@ -17,7 +17,7 @@ const Diabetes = () => {
             <span>/</span>
             <Link to="/" className="hover:text-primary medical-transition">Health Topics</Link>
             <span>/</span>
-            <span className="medical-text">Diabetes</span>
+            <span className="medical-text">Diabetes Mellitus</span>
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@ const Diabetes = () => {
           {/* Header */}
           <header className="mb-8">
             <h1 className="text-4xl md:text-5xl font-bold medical-heading mb-4">
-              Diabetes: Understanding and Management
+              Diabetes Mellitus: Complete Management Guide & Clinical Standards
             </h1>
             <div className="flex items-center space-x-4 text-sm medical-text-light">
               <div className="flex items-center">
@@ -43,290 +43,443 @@ const Diabetes = () => {
               </div>
               <div className="flex items-center">
                 <AlertCircle className="h-4 w-4 mr-2" />
-                <span>Medically reviewed</span>
+                <span>WHO Clinical Guidelines</span>
               </div>
             </div>
           </header>
 
-          {/* What is Diabetes? */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-semibold medical-heading mb-6">What is Diabetes?</h2>
-            <div className="medical-body space-y-4">
-              <p>
-                Diabetes is a group of metabolic disorders characterized by high blood glucose (blood sugar) levels 
-                over a prolonged period. This occurs when the body either doesn't produce enough insulin or cannot 
-                effectively use the insulin it produces.
-              </p>
-              <p>
-                Insulin is a hormone produced by the pancreas that allows glucose from food to enter cells to be 
-                used for energy. When this process doesn't work properly, glucose stays in the blood, leading to 
-                high blood sugar levels that can cause serious health complications over time.
-              </p>
-              <p>
-                There are several types of diabetes, with Type 1, Type 2, and gestational diabetes being the most common. 
-                According to the World Health Organization, approximately 422 million people worldwide have diabetes, 
-                and it's a leading cause of blindness, kidney failure, heart attacks, stroke, and lower limb amputation.
-              </p>
+          {/* Quick Navigation */}
+          <div className="bg-secondary rounded-lg p-6 mb-12">
+            <h2 className="text-xl font-semibold medical-heading mb-4">Quick Navigation</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+              <a href="#understanding" className="text-primary hover:text-primary/80 medical-transition">Understanding Diabetes</a>
+              <a href="#diagnosis" className="text-primary hover:text-primary/80 medical-transition">Diagnosis & Classification</a>
+              <a href="#management" className="text-primary hover:text-primary/80 medical-transition">Treatment Management</a>
+              <a href="#complications" className="text-primary hover:text-primary/80 medical-transition">Complications</a>
+              <a href="#type1" className="text-primary hover:text-primary/80 medical-transition">Type 1 Diabetes</a>
+              <a href="#type2" className="text-primary hover:text-primary/80 medical-transition">Type 2 Diabetes</a>
+              <a href="#pregnancy" className="text-primary hover:text-primary/80 medical-transition">Diabetes & Pregnancy</a>
+              <a href="#prevention" className="text-primary hover:text-primary/80 medical-transition">Prevention Strategies</a>
             </div>
-          </section>
+          </div>
 
-          {/* Causes */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-semibold medical-heading mb-6">Causes of Diabetes</h2>
-            <div className="medical-body space-y-6">
-              
-              <div>
-                <h3 className="text-xl font-semibold medical-heading mb-3">Type 1 Diabetes</h3>
-                <p>
-                  Type 1 diabetes is an autoimmune condition where the body's immune system attacks and destroys 
-                  the insulin-producing beta cells in the pancreas. The exact cause is unknown, but it's believed 
-                  to involve a combination of genetic predisposition and environmental factors such as viruses.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold medical-heading mb-3">Type 2 Diabetes</h3>
-                <p>
-                  Type 2 diabetes develops when the body becomes resistant to insulin or when the pancreas doesn't 
-                  produce enough insulin. Risk factors include:
-                </p>
-                <ul className="list-disc list-inside mt-3 space-y-2 medical-text-light">
-                  <li>Obesity and excess abdominal fat</li>
-                  <li>Physical inactivity</li>
-                  <li>Poor diet high in processed foods and sugars</li>
-                  <li>Family history of diabetes</li>
-                  <li>Age (risk increases after 45)</li>
-                  <li>High blood pressure</li>
-                  <li>Abnormal cholesterol levels</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold medical-heading mb-3">Gestational Diabetes</h3>
-                <p>
-                  This type develops during pregnancy when hormonal changes make it harder for the body to use 
-                  insulin effectively. Risk factors include being overweight, having a family history of diabetes, 
-                  and previous gestational diabetes.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Symptoms */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-semibold medical-heading mb-6">Signs and Symptoms</h2>
-            <div className="medical-body space-y-4">
-              <p>
-                Diabetes symptoms can develop gradually (Type 2) or appear suddenly (Type 1). Common symptoms include:
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                <div className="bg-secondary rounded-lg p-6">
-                  <h3 className="text-lg font-semibold medical-heading mb-4">Common Symptoms</h3>
-                  <ul className="space-y-2 medical-text-light">
-                    <li>• Excessive thirst and urination</li>
-                    <li>• Unexplained weight loss</li>
-                    <li>• Increased hunger</li>
-                    <li>• Fatigue and weakness</li>
-                    <li>• Blurred vision</li>
-                    <li>• Slow-healing wounds</li>
-                    <li>• Frequent infections</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-secondary rounded-lg p-6">
-                  <h3 className="text-lg font-semibold medical-heading mb-4">Emergency Symptoms</h3>
-                  <ul className="space-y-2 medical-text-light">
-                    <li>• Severe dehydration</li>
-                    <li>• Difficulty breathing</li>
-                    <li>• Confusion or altered consciousness</li>
-                    <li>• Severe abdominal pain</li>
-                    <li>• Vomiting and inability to keep fluids down</li>
-                    <li>• Very high blood sugar (over 400 mg/dL)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Diagnosis */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-semibold medical-heading mb-6">Diagnosis</h2>
-            <div className="medical-body space-y-4">
-              <p>
-                Diabetes is diagnosed through several blood tests that measure blood glucose levels. 
-                Healthcare providers use these tests to determine if blood sugar levels are higher than normal.
-              </p>
-              
-              <div className="bg-secondary rounded-lg p-6 mt-6">
-                <h3 className="text-lg font-semibold medical-heading mb-4">Diagnostic Tests</h3>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold medical-text mb-2">Fasting Plasma Glucose (FPG)</h4>
-                    <p className="medical-text-light text-sm">Measures blood sugar after 8+ hours of fasting. Diabetes: ≥126 mg/dL</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold medical-text mb-2">Oral Glucose Tolerance Test (OGTT)</h4>
-                    <p className="medical-text-light text-sm">Measures blood sugar before and 2 hours after drinking glucose solution. Diabetes: ≥200 mg/dL</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold medical-text mb-2">Hemoglobin A1C</h4>
-                    <p className="medical-text-light text-sm">Shows average blood sugar over 2-3 months. Diabetes: ≥6.5%</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold medical-text mb-2">Random Plasma Glucose</h4>
-                    <p className="medical-text-light text-sm">Taken at any time with symptoms. Diabetes: ≥200 mg/dL</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Treatment */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-semibold medical-heading mb-6">Treatment and Management</h2>
+          {/* Understanding Diabetes */}
+          <section id="understanding" className="mb-12">
+            <h2 className="text-3xl font-semibold medical-heading mb-6">Understanding Diabetes Mellitus</h2>
             <div className="medical-body space-y-6">
               <p>
-                Effective diabetes management involves a comprehensive approach that includes medication, 
-                lifestyle changes, and regular monitoring. Treatment plans are individualized based on 
-                the type of diabetes, overall health, and personal circumstances.
+                Diabetes mellitus represents a group of metabolic disorders characterized by chronic hyperglycemia 
+                (elevated blood glucose levels) resulting from defects in insulin secretion, insulin action, or both. 
+                This condition affects how your body processes glucose, the primary source of energy for cellular functions.
               </p>
-
-              <div>
-                <h3 className="text-xl font-semibold medical-heading mb-4">Medication Management</h3>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="text-lg font-semibold medical-text mb-2">Type 1 Diabetes</h4>
-                    <p className="medical-text-light">
-                      Requires lifelong insulin therapy through injections or insulin pumps. Different types 
-                      of insulin work at different speeds and durations to mimic the body's natural insulin production.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold medical-text mb-2">Type 2 Diabetes</h4>
-                    <p className="medical-text-light">
-                      May be managed with oral medications like metformin, insulin, or other injectable medications. 
-                      Treatment often starts with lifestyle changes and progresses to medication as needed.
-                    </p>
-                  </div>
+              
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-xl font-semibold medical-heading mb-4 flex items-center">
+                  <Target className="h-5 w-5 text-blue-600 mr-2" />
+                  Global Impact & Statistics
+                </h3>
+                <div className="space-y-3 medical-text-light">
+                  <p>• Affects up to 10% of adults aged 20+ in Eastern Mediterranean regions</p>
+                  <p>• Rates double when including impaired glucose tolerance (IGT) cases</p>
+                  <p>• Leading cause of blindness, kidney failure, heart attacks, and strokes globally</p>
+                  <p>• Major contributor to lower limb amputations and premature death</p>
+                  <p>• Significant economic burden on healthcare systems worldwide</p>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold medical-heading mb-4">Lifestyle Management</h3>
+                <h3 className="text-xl font-semibold medical-heading mb-4">The Role of Insulin in Glucose Metabolism</h3>
+                <p className="mb-4">
+                  Insulin, a hormone produced by pancreatic beta cells, acts as a key that allows glucose to enter 
+                  cells for energy production. In diabetes, this process becomes impaired through various mechanisms:
+                </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                  <div className="bg-secondary rounded-lg p-6">
+                    <h4 className="text-lg font-semibold medical-text mb-3">Insulin Deficiency</h4>
+                    <p className="medical-text-light text-sm">
+                      Occurs when pancreatic beta cells are destroyed (Type 1) or produce insufficient 
+                      insulin relative to body needs (advanced Type 2).
+                    </p>
+                  </div>
+                  <div className="bg-secondary rounded-lg p-6">
+                    <h4 className="text-lg font-semibold medical-text mb-3">Insulin Resistance</h4>
+                    <p className="medical-text-light text-sm">
+                      Body tissues become less responsive to insulin action, requiring higher levels 
+                      to maintain normal glucose levels (primarily Type 2).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Diagnosis and Classification */}
+          <section id="diagnosis" className="mb-12">
+            <h2 className="text-3xl font-semibold medical-heading mb-6">Diagnosis & Classification of Diabetes</h2>
+            <div className="medical-body space-y-6">
+              
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-yellow-800 mb-4">Critical Diagnostic Principle</h3>
+                <p className="text-yellow-700">
+                  Diabetes diagnosis carries significant consequences and must be made with confidence. 
+                  Clinical diagnosis should never be based solely on glycosuria (glucose in urine).
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold medical-heading mb-4">WHO Diagnostic Criteria</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-gray-300 rounded-lg">
+                    <thead className="bg-secondary">
+                      <tr>
+                        <th className="border border-gray-300 p-3 text-left medical-heading">Test Type</th>
+                        <th className="border border-gray-300 p-3 text-left medical-heading">Diabetes (mg/dL)</th>
+                        <th className="border border-gray-300 p-3 text-left medical-heading">Impaired Glucose Tolerance</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border border-gray-300 p-3 medical-text">Fasting Plasma Glucose</td>
+                        <td className="border border-gray-300 p-3 medical-text-light">≥140 mg/dL (7.8 mmol/L)</td>
+                        <td className="border border-gray-300 p-3 medical-text-light">&lt;140 mg/dL</td>
+                      </tr>
+                      <tr className="bg-gray-50">
+                        <td className="border border-gray-300 p-3 medical-text">2-hour OGTT</td>
+                        <td className="border border-gray-300 p-3 medical-text-light">≥200 mg/dL (11.1 mmol/L)</td>
+                        <td className="border border-gray-300 p-3 medical-text-light">140-200 mg/dL</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 p-3 medical-text">Random Plasma Glucose</td>
+                        <td className="border border-gray-300 p-3 medical-text-light">≥200 mg/dL with symptoms</td>
+                        <td className="border border-gray-300 p-3 medical-text-light">Not applicable</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold medical-heading mb-4">Classification of Diabetes Types</h3>
+                <div className="space-y-6">
+                  
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-red-800 mb-3">Insulin-Dependent Diabetes Mellitus (IDDM) - Type 1</h4>
+                    <div className="text-red-700 text-sm space-y-2">
+                      <p><strong>Characteristics:</strong></p>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Acute onset with rapid symptom development</li>
+                        <li>Young age of onset (typically ≤20 years)</li>
+                        <li>Rapid weight loss and ketonuria</li>
+                        <li>Autoimmune destruction of pancreatic beta cells</li>
+                        <li>Absolute insulin deficiency requiring lifelong insulin therapy</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-blue-800 mb-3">Non-Insulin-Dependent Diabetes Mellitus (NIDDM) - Type 2</h4>
+                    <div className="text-blue-700 text-sm space-y-2">
+                      <p><strong>Characteristics:</strong></p>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Gradual onset, often asymptomatic initially</li>
+                        <li>Older age of onset (typically &gt;30 years)</li>
+                        <li>Strong association with obesity</li>
+                        <li>Insulin resistance with relative insulin deficiency</li>
+                        <li>May be managed with diet, oral medications, or insulin</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-purple-800 mb-3">Gestational Diabetes Mellitus (GDM)</h4>
+                    <div className="text-purple-700 text-sm space-y-2">
+                      <p><strong>Definition:</strong> Diabetes first detected during pregnancy</p>
+                      <p><strong>Risk Factors:</strong></p>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Previous GDM or family history of diabetes</li>
+                        <li>Obesity and advanced maternal age</li>
+                        <li>Previous large baby (&gt;4kg) or congenital malformations</li>
+                        <li>Adverse obstetric history</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-green-800 mb-3">Maturity Onset Diabetes of Youth (MODY)</h4>
+                    <div className="text-green-700 text-sm">
+                      <p>
+                        Rare autosomal dominant condition characterized by young age onset and 
+                        hyperglycemia correction without insulin. Often misdiagnosed as Type 1 diabetes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Comprehensive Management */}
+          <section id="management" className="mb-12">
+            <h2 className="text-3xl font-semibold medical-heading mb-6">Comprehensive Diabetes Management</h2>
+            <div className="medical-body space-y-6">
+              
+              <div className="bg-primary text-white rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-4">Fundamental Management Principles</h3>
+                <div className="space-y-3 text-sm">
+                  <p>• <strong>Team Approach:</strong> Collaboration between healthcare providers, patients, and families</p>
+                  <p>• <strong>Patient Education:</strong> Cornerstone of successful diabetes management</p>
+                  <p>• <strong>Self-Care Empowerment:</strong> Patients as primary resource in their care</p>
+                  <p>• <strong>Individualized Targets:</strong> Treatment goals tailored to individual needs</p>
+                  <p>• <strong>Comprehensive Care:</strong> Address diabetes and cardiovascular risk factors</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold medical-heading mb-4">Treatment Targets & Goals</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-gray-300 rounded-lg">
+                    <thead className="bg-secondary">
+                      <tr>
+                        <th className="border border-gray-300 p-3 text-left medical-heading">Parameter</th>
+                        <th className="border border-gray-300 p-3 text-left medical-heading">Optimal</th>
+                        <th className="border border-gray-300 p-3 text-left medical-heading">Acceptable</th>
+                        <th className="border border-gray-300 p-3 text-left medical-heading">Poor</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border border-gray-300 p-3 medical-text">Symptoms</td>
+                        <td className="border border-gray-300 p-3 text-green-600">Absent</td>
+                        <td className="border border-gray-300 p-3 text-yellow-600">Absent</td>
+                        <td className="border border-gray-300 p-3 text-red-600">Present</td>
+                      </tr>
+                      <tr className="bg-gray-50">
+                        <td className="border border-gray-300 p-3 medical-text">Fasting Glucose</td>
+                        <td className="border border-gray-300 p-3 text-green-600">80-120 mg/dL</td>
+                        <td className="border border-gray-300 p-3 text-yellow-600">&lt;160 mg/dL</td>
+                        <td className="border border-gray-300 p-3 text-red-600">&gt;160 mg/dL</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 p-3 medical-text">Postprandial Glucose</td>
+                        <td className="border border-gray-300 p-3 text-green-600">90-145 mg/dL</td>
+                        <td className="border border-gray-300 p-3 text-yellow-600">&lt;180 mg/dL</td>
+                        <td className="border border-gray-300 p-3 text-red-600">&gt;180 mg/dL</td>
+                      </tr>
+                      <tr className="bg-gray-50">
+                        <td className="border border-gray-300 p-3 medical-text">HbA1c (%)</td>
+                        <td className="border border-gray-300 p-3 text-green-600">&lt;110% of upper limit</td>
+                        <td className="border border-gray-300 p-3 text-yellow-600">&lt;140% of upper limit</td>
+                        <td className="border border-gray-300 p-3 text-red-600">&gt;140% of upper limit</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 p-3 medical-text">Blood Pressure</td>
+                        <td className="border border-gray-300 p-3 text-green-600">&lt;135/85 mmHg</td>
+                        <td className="border border-gray-300 p-3 text-yellow-600">&lt;140/90 mmHg</td>
+                        <td className="border border-gray-300 p-3 text-red-600">&gt;160/90 mmHg</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold medical-heading mb-4">Nutritional Management</h3>
+                <p className="mb-4">
+                  Dietary therapy forms the foundation of diabetes management, aiming to achieve optimal 
+                  metabolic control while maintaining nutritional adequacy and quality of life.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-secondary rounded-lg p-6">
                     <h4 className="text-lg font-semibold medical-text mb-3 flex items-center">
                       <Heart className="h-5 w-5 text-primary mr-2" />
-                      Nutrition
+                      Macronutrient Distribution
                     </h4>
-                    <ul className="space-y-2 medical-text-light">
-                      <li>• Focus on whole grains, vegetables, and lean proteins</li>
-                      <li>• Monitor carbohydrate intake and timing</li>
-                      <li>• Control portion sizes</li>
-                      <li>• Limit processed foods and added sugars</li>
-                      <li>• Stay hydrated with water</li>
+                    <ul className="space-y-2 medical-text-light text-sm">
+                      <li>• <strong>Carbohydrates:</strong> 50-60% of total calories (focus on amount vs. type)</li>
+                      <li>• <strong>Fats:</strong> 25-35% total calories (saturated fat &lt;10%)</li>
+                      <li>• <strong>Protein:</strong> 10-15% total calories (0.8-1g/kg body weight)</li>
+                      <li>• <strong>Cholesterol:</strong> Limited to ≤300mg daily</li>
+                      <li>• <strong>Sodium:</strong> Restrict especially with hypertension</li>
                     </ul>
                   </div>
-                  <div>
+                  
+                  <div className="bg-secondary rounded-lg p-6">
                     <h4 className="text-lg font-semibold medical-text mb-3 flex items-center">
-                      <Activity className="h-5 w-5 text-primary mr-2" />
-                      Physical Activity
+                      <Target className="h-5 w-5 text-primary mr-2" />
+                      Dietary Objectives
                     </h4>
-                    <ul className="space-y-2 medical-text-light">
-                      <li>• Aim for 150 minutes of moderate exercise weekly</li>
-                      <li>• Include both aerobic and resistance training</li>
-                      <li>• Monitor blood sugar before and after exercise</li>
-                      <li>• Start slowly and increase gradually</li>
-                      <li>• Consider working with a fitness professional</li>
+                    <ul className="space-y-2 medical-text-light text-sm">
+                      <li>• Achieve and maintain optimal body weight</li>
+                      <li>• Optimize blood glucose levels</li>
+                      <li>• Normalize lipid profiles</li>
+                      <li>• Provide adequate nutrition for growth (children)</li>
+                      <li>• Prevent and treat complications</li>
+                      <li>• Maintain eating pleasure and quality of life</li>
                     </ul>
+                  </div>
+                </div>
+
+                <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold text-blue-800 mb-3">Special Dietary Considerations</h4>
+                  <div className="space-y-2 text-blue-700 text-sm">
+                    <p>• <strong>Artificial Sweeteners:</strong> Use in moderation; limit nutritive sweeteners (sorbitol, fructose)</p>
+                    <p>• <strong>Alcohol:</strong> Same precautions as general population; increases hypoglycemia risk with medications</p>
+                    <p>• <strong>Ramadan Fasting:</strong> Special meal planning considerations for cultural/religious observances</p>
+                    <p>• <strong>Supplements:</strong> Generally unnecessary with balanced diet except in special conditions</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold medical-heading mb-4">Physical Activity & Exercise</h3>
+                <p className="mb-4">
+                  Regular physical activity improves insulin sensitivity, promotes weight loss, and provides 
+                  cardiovascular benefits essential for diabetes management.
+                </p>
+                
+                <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold text-green-800 mb-3 flex items-center">
+                    <Activity className="h-5 w-5 text-green-600 mr-2" />
+                    Exercise Benefits & Guidelines
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <p className="text-green-700 text-sm font-semibold mb-2">Benefits:</p>
+                      <ul className="text-green-700 text-sm space-y-1">
+                        <li>• Improved insulin sensitivity</li>
+                        <li>• Weight management</li>
+                        <li>• Cardiovascular health</li>
+                        <li>• Blood glucose control</li>
+                        <li>• Mental well-being</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="text-green-700 text-sm font-semibold mb-2">Precautions:</p>
+                      <ul className="text-green-700 text-sm space-y-1">
+                        <li>• Monitor for hypoglycemia</li>
+                        <li>• Tailor to individual fitness</li>
+                        <li>• Adjust medication/food intake</li>
+                        <li>• Stay hydrated</li>
+                        <li>• Progress gradually</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Prevention */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-semibold medical-heading mb-6">Prevention Strategies</h2>
-            <div className="medical-body space-y-4">
-              <p>
-                While Type 1 diabetes cannot be prevented, Type 2 diabetes and its complications can often 
-                be prevented or delayed through healthy lifestyle choices.
-              </p>
+          {/* Type 2 Diabetes Management */}
+          <section id="type2" className="mb-12">
+            <h2 className="text-3xl font-semibold medical-heading mb-6">Type 2 Diabetes: Non-Insulin-Dependent Management</h2>
+            <div className="medical-body space-y-6">
               
-              <div className="bg-secondary rounded-lg p-6">
-                <h3 className="text-lg font-semibold medical-heading mb-4">Prevention Strategies</h3>
-                <div className="space-y-3 medical-text-light">
-                  <p>• Maintain a healthy weight through balanced diet and regular exercise</p>
-                  <p>• Choose whole grains over refined carbohydrates</p>
-                  <p>• Limit sugary drinks and opt for water, tea, or coffee</p>
-                  <p>• Get regular physical activity (at least 30 minutes most days)</p>
-                  <p>• Don't smoke and limit alcohol consumption</p>
-                  <p>• Get regular health screenings, especially if you have risk factors</p>
-                  <p>• Manage stress through healthy coping strategies</p>
-                  <p>• Get adequate sleep (7-9 hours per night)</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* When to See a Doctor */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-semibold medical-heading mb-6">When to See a Healthcare Provider</h2>
-            <div className="medical-body space-y-4">
-              <p>
-                Regular medical care is essential for diabetes prevention, early detection, and management. 
-                Seek medical attention promptly in certain situations.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-red-800 mb-4">Seek Immediate Care</h3>
-                  <ul className="space-y-2 text-red-700 text-sm">
-                    <li>• Blood sugar over 400 mg/dL</li>
-                    <li>• Signs of diabetic ketoacidosis</li>
-                    <li>• Severe dehydration or vomiting</li>
-                    <li>• Confusion or loss of consciousness</li>
-                    <li>• Difficulty breathing</li>
-                    <li>• Chest pain or severe headache</li>
-                  </ul>
-                </div>
+              <div>
+                <h3 className="text-xl font-semibold medical-heading mb-4">Pharmacological Treatment Algorithm</h3>
+                <p className="mb-4">
+                  Treatment progression follows a systematic approach, beginning with lifestyle interventions 
+                  and advancing to pharmacological therapy based on glycemic control achievement.
+                </p>
                 
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-yellow-800 mb-4">Schedule an Appointment</h3>
-                  <ul className="space-y-2 text-yellow-700 text-sm">
-                    <li>• Symptoms of diabetes develop</li>
-                    <li>• Family history of diabetes</li>
-                    <li>• Overweight with other risk factors</li>
-                    <li>• Blood pressure consistently high</li>
-                    <li>• Previous gestational diabetes</li>
-                    <li>• Age 45+ without recent screening</li>
+                <div className="bg-secondary rounded-lg p-6">
+                  <h4 className="text-lg font-semibold medical-text mb-4">Oral Hypoglycemic Drugs (OHDs)</h4>
+                  
+                  <div className="space-y-6">
+                    <div className="border-l-4 border-blue-500 pl-4">
+                      <h5 className="font-semibold medical-text mb-2">Sulfonylureas (SUs)</h5>
+                      <p className="medical-text-light text-sm mb-2">
+                        <strong>Mechanism:</strong> Stimulate insulin release from pancreatic beta cells and enhance peripheral insulin action.
+                      </p>
+                      <div className="space-y-2 text-sm medical-text-light">
+                        <p>• <strong>Glibenclamide:</strong> Initial dose 1.25-2.5mg, maximum 15mg daily</p>
+                        <p>• <strong>Tolbutamide:</strong> Initial dose 0.5g, maximum 1.5g daily (divided doses)</p>
+                        <p>• <strong>Cautions:</strong> Hypoglycemia risk, especially in elderly and renal impairment</p>
+                        <p>• <strong>Contraindications:</strong> Pregnancy, breastfeeding</p>
+                      </div>
+                    </div>
+                    
+                    <div className="border-l-4 border-green-500 pl-4">
+                      <h5 className="font-semibold medical-text mb-2">Biguanides (Metformin)</h5>
+                      <p className="medical-text-light text-sm mb-2">
+                        <strong>Mechanism:</strong> Decreases gluconeogenesis and increases peripheral glucose utilization.
+                      </p>
+                      <div className="space-y-2 text-sm medical-text-light">
+                        <p>• <strong>Dosing:</strong> Start 500-850mg daily with food, increase to 500mg TDS or 850mg BD</p>
+                        <p>• <strong>Primary Use:</strong> Obese patients not responding to dietary therapy</p>
+                        <p>• <strong>Major Risk:</strong> Lactic acidosis (rare but serious)</p>
+                        <p>• <strong>Contraindications:</strong> Renal impairment, age &gt;70 years, heart failure, hepatic impairment</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h5 className="font-semibold text-yellow-800 mb-2">Combination Therapy</h5>
+                    <p className="text-yellow-700 text-sm">
+                      SUs may be combined with metformin when therapy targets are not achieved with either drug alone. 
+                      This approach can improve glycemic control while potentially reducing individual drug dosages.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold medical-heading mb-4">Glucose Monitoring Strategies</h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-blue-800 mb-3">Blood Glucose Testing</h4>
+                    <div className="space-y-2 text-blue-700 text-sm">
+                      <p>• More informative and safer than urine testing</p>
+                      <p>• Essential for poorly controlled cases and insulin users</p>
+                      <p>• Glucose meters useful but not essential</p>
+                      <p>• Visual strips equally reliable with proper training</p>
+                      <p>• Check technique precision every 6 months</p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-green-800 mb-3">Urine Glucose Testing</h4>
+                    <div className="space-y-2 text-green-700 text-sm">
+                      <p>• Alternative when blood testing not feasible</p>
+                      <p>• Use second-void specimens</p>
+                      <p>• Goal: persistently negative (normal renal threshold)</p>
+                      <p>• Acceptable for stable elderly patients</p>
+                      <p>• Check blood glucose if urine glucose &gt;2%</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 bg-red-50 border border-red-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold text-red-800 mb-3">Ketone Monitoring</h4>
+                  <p className="text-red-700 text-sm mb-2">Check urine ketones when:</p>
+                  <ul className="text-red-700 text-sm space-y-1">
+                    <li>• Blood glucose consistently &gt;300 mg/dL</li>
+                    <li>• Urine glucose consistently &gt;2%</li>
+                    <li>• During intercurrent illnesses</li>
+                    <li>• Symptoms of diabetic ketoacidosis present</li>
                   </ul>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Final Advice */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-semibold medical-heading mb-6">Living Well with Diabetes</h2>
-            <div className="medical-body space-y-4">
-              <p>
-                Diabetes is a serious condition, but with proper management, people with diabetes can live 
-                long, healthy, and fulfilling lives. The key is working closely with your healthcare team 
-                to develop and follow a comprehensive management plan.
-              </p>
-              <p>
-                Remember that diabetes management is a marathon, not a sprint. Small, consistent changes 
-                in diet, exercise, and medication adherence can make a significant difference in long-term 
-                outcomes. Don't hesitate to reach out to healthcare professionals, diabetes educators, 
-                and support groups for guidance and encouragement.
-              </p>
-              <p>
-                Stay informed about the latest diabetes research and treatment options, but always discuss 
-                any changes to your treatment plan with your healthcare provider first.
-              </p>
+          {/* Type 1 Diabetes Management */}
+          <section id="type1" className="mb-12">
+            <h2 className="text-3xl font-semibold medical-heading mb-6">Type 1 Diabetes: Insulin-Dependent Management</h2>
+            <div className="medical-body space-y-6">
+              
+              <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-red-800 mb-4">Specific Management Objectives</h3>
+                <div className="space-y-3 text-red-700">
+                  <p>• Achieve optimal metabolic control mimicking physiological insulin secretion</p>
+                  <p>• Minimize hypoglycemia risk while maintaining near-normal glucose levels</p>
+                  <p>• Ensure normal growth and development in children and adolescents</p>
+                  <p>• Prevent acute and long-term complications</p>
+                  <p>• Provide psychological support and family education</p>
+                  <p>• Maintain quality of life</p>
+                </div>
+              </div>
             </div>
           </section>
 
