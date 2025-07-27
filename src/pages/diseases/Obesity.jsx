@@ -1,9 +1,12 @@
-import { ArrowLeft, Calendar, AlertCircle } from 'lucide-react';
-
+import { ArrowLeft, Calendar, AlertCircle, Calculator } from 'lucide-react';
+import { Link } from 'react-router-dom';
 const Obesity = () => {
+ 
+  
+
   return (
     <div className="min-h-screen bg-background">
-      {/* Navbar component would be imported and used here */}
+     
       <div className="bg-blue-600 text-white p-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-xl font-semibold">Healthcare Portal</h1>
@@ -93,12 +96,13 @@ const Obesity = () => {
                       Use our BMI calculator to determine your current BMI category and assess your weight status.
                     </p>
                   </div>
-                  <button className="ml-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center space-x-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
-                    <span>Calculate BMI</span>
+                  <button className="bg-blue-600 text-white hover:bg-blue-700 transition-colors px-4 py-2 rounded-lg">
+                    
+                    <a href="/bmi-calculator" className="flex items-center space-x-2">BMI Calculator</a>
                   </button>
+                 
+                  
+            
                 </div>
               </div>
             </div>
@@ -299,14 +303,10 @@ const Obesity = () => {
         </div>
       </main>
 
-      {/* Footer placeholder */}
-      <footer className="bg-gray-800 text-white p-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <p>&copy; 2024 Healthcare Portal. All rights reserved.</p>
-        </div>
-      </footer>
+
+     
     </div>
+   
   );
 };
-
 export default Obesity;

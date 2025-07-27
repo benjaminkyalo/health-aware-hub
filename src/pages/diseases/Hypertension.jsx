@@ -1,5 +1,4 @@
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Calendar, AlertCircle, Heart, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -7,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Hypertension = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      
       
       {/* Breadcrumb */}
       <div className="bg-secondary py-4">
@@ -372,7 +371,7 @@ const Hypertension = () => {
         </div>
       </main>
 
-      <Footer />
+     
     </div>
   );
 };

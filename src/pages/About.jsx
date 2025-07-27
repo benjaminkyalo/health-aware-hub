@@ -1,11 +1,10 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
 			{/* Navbar component would be imported and used here */}
 
-			<Navbar />
+			
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-16">
@@ -196,8 +195,7 @@ const About = () => {
           </p>
         </section>
       </div>
-      {/* Footer */}
-			<Footer />
+     
     </div>
   );
 };

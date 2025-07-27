@@ -1,6 +1,5 @@
 import { useState } from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -79,8 +78,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-			{/* Navbar component would be imported and used here */}
-			<Navbar />
+			
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -199,7 +197,7 @@ const Blog = () => {
           </div>
         </div>
       </div>
-		<Footer />
+		
     </div>
   );
 };

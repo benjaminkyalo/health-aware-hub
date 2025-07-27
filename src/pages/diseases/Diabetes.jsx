@@ -1,5 +1,4 @@
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Calendar, AlertCircle, Heart, Activity,  Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -7,8 +6,7 @@ import { Link } from 'react-router-dom';
 const Diabetes = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-      
+    
       {/* Breadcrumb */}
       <div className="bg-secondary py-4">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -498,7 +496,7 @@ const Diabetes = () => {
         </div>
       </main>
 
-      <Footer />
+    
     </div>
   );
 };

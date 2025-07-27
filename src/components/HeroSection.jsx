@@ -91,8 +91,8 @@ const HeroSection = () => {
                   onClick={() =>
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
                   }
-                >
-                  Contact Expert
+                ><a href="/homepage" className="flex items-center space-x-2">Contact Expert</a>
+                  
                 </Button>
               </div>
             </div>

@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -48,8 +46,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-			{/* Navbar component would be imported and used here */}
-			<Navbar />
+			
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-16">
@@ -218,8 +215,7 @@ const Contact = () => {
           </p>
         </div>
       </div>
-				{/* Footer */}
-				<Footer />
+				
     </div>
   );
 };
