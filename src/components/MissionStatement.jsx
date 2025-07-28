@@ -63,17 +63,7 @@ const MissionStatement = () => {
           })}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-teal-50 to-cyan-50 border border-teal-200 rounded-lg p-8 text-center shadow-sm">
-          <h3 className="text-2xl font-semibold text-slate-800 mb-4">
-            Medical Disclaimer
-          </h3>
-          <p className="text-slate-700 leading-relaxed max-w-4xl mx-auto">
-            The information provided on Health Aware Hub is for educational purposes only and is not intended 
-            to replace professional medical advice, diagnosis, or treatment. Always seek the advice of qualified 
-            healthcare providers with any questions you may have regarding a medical condition. Never disregard 
-            professional medical advice or delay seeking it because of something you have read on this platform.
-          </p>
-        </div>
+        
       </div>
     </section>
   );

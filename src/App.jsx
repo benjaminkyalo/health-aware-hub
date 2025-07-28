@@ -21,6 +21,8 @@ import Layout from "./components/Layout";
 import BMICalculator from "./pages/BMICalculator";
 import Privacy from "./pages/Privacy";
 import Disclaimer from "./pages/Disclaimer";
+import TermsOfUse from "./pages/TermsOfUse";
+import Accessibility from "./pages/Accessibility";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +40,8 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/disclaimer" element={<Disclaimer />} />
+              <Route path="/terms-of-use" element={<TermsOfUse />} />
+              <Route path="/accessibility" element={<Accessibility />} />
               
               {/* Main Pages */}
 

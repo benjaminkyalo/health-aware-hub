@@ -13,7 +13,7 @@ const DoctorDiscovery = () => {
       name: "Dr. Sarah Johnson",
       credentials: "MD, Internal Medicine",
       specialization: "General Practice & Preventive Care",
-      image: "👩",
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face",
       experience: "12+ years",
       rating: 4.9
     },
@@ -22,7 +22,7 @@ const DoctorDiscovery = () => {
       name: "Dr. Michael Chen",
       credentials: "MD, Cardiology",
       specialization: "Heart Health & Cardiovascular Care",
-      image: "👨",
+      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face",
       experience: "15+ years",
       rating: 4.8
     },
@@ -31,7 +31,7 @@ const DoctorDiscovery = () => {
       name: "Dr. Robert Williams",
       credentials: "MD, PhD, Family Medicine",
       specialization: "Family Medicine & Geriatric Care",
-      image: "👨",
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=300&fit=crop&crop=face",
       experience: "25+ years",
       rating: 5.0
     }
@@ -61,13 +61,13 @@ const DoctorDiscovery = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-subtle-gradient">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Meet Our Medical Team
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Connect with certified medical professionals who are committed to providing 
             exceptional healthcare guidance and support.
           </p>
@@ -76,9 +76,9 @@ const DoctorDiscovery = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Left Side - Practice Information */}
           <div className="space-y-8">
-            <Card className="bg-medical-light-blue border-none">
+            <Card className="bg-blue-50 border-blue-100 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-center text-foreground">
+                <CardTitle className="text-2xl text-center text-gray-900">
                   Our Medical Excellence
                 </CardTitle>
               </CardHeader>
@@ -86,15 +86,15 @@ const DoctorDiscovery = () => {
                 {practiceHighlights.map((highlight, index) => (
                   <div key={index} className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-primary rounded-full">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full">
                         <highlight.icon className="w-6 h-6 text-white" />
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-2">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
                         {highlight.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-gray-600 leading-relaxed">
                         {highlight.description}
                       </p>
                     </div>
@@ -103,16 +103,16 @@ const DoctorDiscovery = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-medical-light-green border-none">
+            <Card className="bg-green-50 border-green-100 shadow-lg">
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Free Initial Consultation
                 </h3>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-gray-600 mb-6">
                   No upfront service fees. Start your healthcare journey with a complimentary 
                   consultation to discuss your medical concerns.
                 </p>
-                <div className="inline-flex items-center text-medical-trust font-semibold">
+                <div className="inline-flex items-center text-green-700 font-semibold">
                   <Shield className="w-5 h-5 mr-2" />
                   100% Confidential & Secure
                 </div>
@@ -123,42 +123,42 @@ const DoctorDiscovery = () => {
           {/* Right Side - Doctor Profiles */}
           <div className="space-y-6">
             {doctors.map((doctor) => (
-              <Card key={doctor.id} className="hover:shadow-elevated transition-all duration-300">
+              <Card key={doctor.id} className="hover:shadow-xl transition-all duration-300 bg-white border-gray-200">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-6">
                     <div className="flex-shrink-0">
                       <img
                         src={doctor.image}
                         alt={doctor.name}
-                        className="w-24 h-24 rounded-full object-cover shadow-card"
+                        className="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white"
                       />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-foreground">
+                        <h3 className="text-xl font-bold text-gray-900">
                           {doctor.name}
                         </h3>
                         <div className="flex items-center text-yellow-500">
                           <Star className="w-4 h-4 fill-current" />
-                          <span className="ml-1 text-sm font-medium text-foreground">
+                          <span className="ml-1 text-sm font-medium text-gray-900">
                             {doctor.rating}
                           </span>
                         </div>
                       </div>
-                      <p className="text-primary font-medium mb-1">
+                      <p className="text-blue-600 font-medium mb-1">
                         {doctor.credentials}
                       </p>
-                      <p className="text-muted-foreground mb-2">
+                      <p className="text-gray-600 mb-2">
                         {doctor.specialization}
                       </p>
-                      <p className="text-sm text-muted-foreground mb-4">
+                      <p className="text-sm text-gray-500 mb-4">
                         {doctor.experience} experience
                       </p>
                       <Button 
                         variant="medical" 
                         size="lg"
                         onClick={() => navigate(`/booking/${doctor.id}`)}
-                        className="w-full"
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
                       >
                         Book {doctor.name.split(' ')[1]}
                       </Button>
