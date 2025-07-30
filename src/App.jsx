@@ -23,6 +23,8 @@ import Privacy from "./pages/Privacy";
 import Disclaimer from "./pages/Disclaimer";
 import TermsOfUse from "./pages/TermsOfUse";
 import Accessibility from "./pages/Accessibility";
+import Resources from "./pages/Resources";
+import HealthScreening from "./pages/HealthScreening";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +44,8 @@ const App = () => (
               <Route path="/disclaimer" element={<Disclaimer />} />
               <Route path="/terms-of-use" element={<TermsOfUse />} />
               <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/screening" element={<HealthScreening />} />
               
               {/* Main Pages */}
 

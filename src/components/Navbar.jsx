@@ -22,7 +22,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center space-x-2 transition-opacity duration-200 hover:opacity-80">
-              <Stethoscope className="h-8 w-8 text-teal-600" />
+              <img className="h-8 w-8 text-blue-600 dark:text-blue-400" src="/favicon-32x32.png" alt="MyHealthTracker Logo" />
               <span className="text-xl font-semibold text-slate-800">Health Aware Hub</span>
             </a>
           </div>

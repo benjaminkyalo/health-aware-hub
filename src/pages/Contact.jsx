@@ -141,8 +141,10 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-4">
                   For content suggestions, corrections, or editorial inquiries.
                 </p>
-                <a href="mailto:editorial@healthawarehub.com" className="medical-link font-medium">
-                  editorial@healthawarehub.com
+                <a href="mailto:healthawarehuborg@gmail.com
+                " className="medical-link font-medium">
+                  healthawarehuborg@gmail.com
+
                 </a>
               </div>
 
@@ -153,8 +155,9 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-4">
                   For general questions, technical support, or website feedback.
                 </p>
-                <a href="mailto:support@healthawarehub.com" className="medical-link font-medium">
-                  support@healthawarehub.com
+                <a href="mailto:healthawarehuborg@gmail.com" className="medical-link font-medium">
+                  healthawarehuborg@gmail.com
+
                 </a>
               </div>
 
