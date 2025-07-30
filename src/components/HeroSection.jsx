@@ -79,10 +79,11 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   className="bg-cyan-500 hover:bg-cyan-600 text-white text-lg px-8 py-4 rounded-lg font-semibold shadow-lg transition-all duration-200 hover:shadow-xl"
-                  
+                  onClick={() =>
+                    document.getElementById('disease-preview')?.scrollIntoView({ behavior: 'smooth' })
+                  }
                 >
-                  <a href="/disease-preview" className="flex items-center space-x-2">Explore Health Topics</a>
-                  
+                  Explore Health Topics
                 </Button>
                 <Button
                   variant="outline"

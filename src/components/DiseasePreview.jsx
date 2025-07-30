@@ -40,7 +40,7 @@ const DiseasePreview = () => {
     },
     {
       name: 'High Blood Pressure',
-      path: '/diseases/high-blood-pressure',
+      path: '/diseases/hypertension',
       icon: Eye,
       description: 'Understanding hypertension and cardiovascular health.',
       color: 'text-orange-600'

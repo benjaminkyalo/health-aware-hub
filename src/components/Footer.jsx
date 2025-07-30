@@ -26,7 +26,7 @@ const Footer = () => {
     { name: 'Contact', href: '/contact' },
     { name: 'Resources', href: '/resources' },
     { name: 'Health Screening', href: '/screening' },
-    { name: 'Expert Consultation', href: '/consultation' },
+    { name: 'Expert Consultation', href: '/homepage' },
   ];
 
   const legalLinks = [

@@ -8,7 +8,7 @@ const Disclaimer = () => {
               Medical Disclaimer
             </h1>
             <p className="text-lg text-muted-foreground">
-              Last updated: January 15, 2024
+              Last updated: July 15, 2025
             </p>
           </div>
 
@@ -198,10 +198,7 @@ const Disclaimer = () => {
                   <h3 className="font-semibold text-foreground mb-2">United States</h3>
                   <p className="text-2xl font-bold text-primary">911</p>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">Poison Control</h3>
-                  <p className="text-lg font-semibold text-primary">1-800-222-1222</p>
-                </div>
+        
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">Mental Health Crisis</h3>
                   <p className="text-lg font-semibold text-primary">988</p>

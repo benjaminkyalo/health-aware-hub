@@ -6,6 +6,9 @@ import { Shield, Clock, Users, Award } from "lucide-react";
 
 const Homepage = () => {
   const navigate = useNavigate();
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  };
 
   const AdBanner = ({ className, label }) => (
     <div className={`bg-gray-100 border border-gray-300 rounded-lg flex items-center justify-center text-gray-500 font-medium ${className}`}>
@@ -124,10 +127,11 @@ const Homepage = () => {
               <Button 
                 variant="medical" 
                 size="xl" 
-                onClick={() => navigate("/doctors")}
+                onClick={scrollToTop}
+                
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
               >
-                Get Started Now
+               <a href="/contact">Get Started Now</a> 
               </Button>
             </div>
           </section>
