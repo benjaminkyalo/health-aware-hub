@@ -1,4 +1,6 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -7,11 +9,32 @@ const Contact = () => {
     message: ""
   });
 
+  const [status, setStatus] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", email: "", message: "" });
-    alert("Thank you for your message. We'll get back to you soon!");
+    setStatus("Sending...");
+
+    emailjs
+      .send(
+        "service_fz50xlv",       // ✅ Service ID
+        "template_j2j4jdh",      // ✅ Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        },
+        "6P2qmhquDmkM_eRv8"      // ✅ Public Key
+      )
+      .then(
+        () => {
+          setStatus("Message sent successfully ✅");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        () => {
+          setStatus("Failed to send ❌. Please try again.");
+        }
+      );
   };
 
   const handleChange = (e) => {
@@ -46,7 +69,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-			
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-16">
@@ -120,10 +142,16 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-medical-blue-hover transition-colors duration-200"
+                className="w-full bg-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-medical-blue-hover transition-colors duration-200"
               >
                 Send Message
               </button>
+
+              {status && (
+                <p className="text-center mt-4 text-sm text-muted-foreground">
+                  {status}
+                </p>
+              )}
             </form>
           </div>
 
@@ -141,10 +169,8 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-4">
                   For content suggestions, corrections, or editorial inquiries.
                 </p>
-                <a href="mailto:healthawarehuborg@gmail.com
-                " className="medical-link font-medium">
+                <a href="mailto:healthawarehuborg@gmail.com" className="medical-link font-medium">
                   healthawarehuborg@gmail.com
-
                 </a>
               </div>
 
@@ -157,7 +183,6 @@ const Contact = () => {
                 </p>
                 <a href="mailto:healthawarehuborg@gmail.com" className="medical-link font-medium">
                   healthawarehuborg@gmail.com
-
                 </a>
               </div>
 
@@ -218,7 +243,6 @@ const Contact = () => {
           </p>
         </div>
       </div>
-				
     </div>
   );
 };
