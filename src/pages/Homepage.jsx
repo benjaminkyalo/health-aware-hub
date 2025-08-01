@@ -10,11 +10,6 @@ const Homepage = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   };
 
-  const AdBanner = ({ className, label }) => (
-    <div className={`bg-gray-100 border border-gray-300 rounded-lg flex items-center justify-center text-gray-500 font-medium ${className}`}>
-      {label}
-    </div>
-  );
 
   const features = [
     {
@@ -41,10 +36,8 @@ const Homepage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      {/* Top Banner Ad */}
-      <div className="w-full p-4">
-        <AdBanner className="h-20 md:h-24" label="Advertisement Banner - 728x90" />
-      </div>
+
+    
 
       <div className="flex">
         {/* Main Content */}
@@ -137,10 +130,6 @@ const Homepage = () => {
           </section>
         </div>
 
-        {/* Right Sidebar Ad - Hidden on mobile */}
-        <div className="hidden xl:block w-80 2xl:w-96 p-4 sticky top-4 h-fit">
-          <AdBanner className="h-[600px] w-full" label="Right Ad 320x600" />
-        </div>
       </div>
     </div>
   );
