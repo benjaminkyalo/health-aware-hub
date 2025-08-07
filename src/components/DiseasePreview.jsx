@@ -69,21 +69,21 @@ const DiseasePreview = () => {
                 href={disease.path}
                 className="group block"
               >
-                <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-teal-300">
+                <div className="bg-white rounded-lg p-6 border border-cyan-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:-trancyan-y-1 hover:border-cyan-300">
                   <div className="flex items-center mb-4">
-                    <div className="p-3 rounded-lg bg-slate-50 mr-4 group-hover:bg-teal-50 transition-colors duration-300">
-                      <IconComponent className={`h-6 w-6 ${disease.color} group-hover:text-teal-600 transition-colors duration-300`} />
+                    <div className="p-3 rounded-lg bg-cyan-50 mr-4 group-hover:bg-cyan-50 transition-colors duration-300">
+                      <IconComponent className={`h-6 w-6 ${disease.color} group-hover:text-cyan-500 transition-colors duration-300`} />
                     </div>
-                    <h3 className="text-xl font-semibold text-slate-800 group-hover:text-teal-700 transition-colors duration-300">
+                    <h3 className="text-xl font-semibold text-gray-800 group-hover:text-cyan-600 transition-colors duration-300">
                       {disease.name}
                     </h3>
                   </div>
-                  <p className="text-slate-600 mb-4 leading-relaxed">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
                     {disease.description}
                   </p>
-                  <div className="flex items-center text-teal-600 group-hover:text-teal-700 transition-colors duration-300">
+                  <div className="flex items-center text-cyan-500 group-hover:text-cyan-600 transition-colors duration-300">
                     <span className="text-sm font-medium">Learn more</span>
-                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:trancyan-x-1 transition-transform duration-300" />
                   </div>
                 </div>
               </a>
@@ -95,10 +95,10 @@ const DiseasePreview = () => {
           <p className="text-slate-600 mb-6 leading-relaxed">
             Need personalized medical advice? Our platform connects you with qualified healthcare professionals.
           </p>
-          <a href="/contact">
-            <Button className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+          <a href="/contact" className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+            
               Schedule Consultation
-            </Button>
+            
           </a>
         </div>
       </div>

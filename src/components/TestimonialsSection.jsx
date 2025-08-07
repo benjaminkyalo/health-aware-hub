@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from 'react';
 import { Star, Quote } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
@@ -10,6 +11,8 @@ import {
 } from "@/components/ui/carousel";
 
 const TestimonialsSection = () => {
+  const carouselRef = useRef(null);
+
   const testimonials = [
     {
       name: 'Dr. Sarah Johnson',
@@ -55,6 +58,20 @@ const TestimonialsSection = () => {
     }
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (carouselRef.current) {
+        const nextButton = carouselRef.current.querySelector('[data-carousel-next]') || 
+                          carouselRef.current.querySelector('button:last-child');
+        if (nextButton) {
+          nextButton.click();
+        }
+      }
+    }, 4000); // Slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,54 +84,56 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-6xl mx-auto"
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow h-full">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-1 mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                    
-                    <div className="relative mb-6">
-                      <Quote className="h-8 w-8 text-cyan-600/20 absolute -top-2 -left-2" />
-                      <p className="text-gray-600 italic pl-6">
-                        "{testimonial.content}"
-                      </p>
-                    </div>
-                    
-                    <div className="flex items-center gap-3">
-                      <Avatar className="h-12 w-12">
-                        <AvatarFallback className="bg-cyan-600 text-white">
-                          {testimonial.initials}
-                        </AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <div className="font-semibold text-gray-900">
-                          {testimonial.name}
-                        </div>
-                        <div className="text-sm text-gray-600">
-                          {testimonial.role}
+        <div ref={carouselRef}>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow h-full">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-1 mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                      
+                      <div className="relative mb-6">
+                        <Quote className="h-8 w-8 text-cyan-600/20 absolute -top-2 -left-2" />
+                        <p className="text-gray-600 italic pl-6">
+                          "{testimonial.content}"
+                        </p>
+                      </div>
+                      
+                      <div className="flex items-center gap-3">
+                        <Avatar className="h-12 w-12">
+                          <AvatarFallback className="bg-cyan-600 text-white">
+                            {testimonial.initials}
+                          </AvatarFallback>
+                        </Avatar>
+                        <div>
+                          <div className="font-semibold text-gray-900">
+                            {testimonial.name}
+                          </div>
+                          <div className="text-sm text-gray-600">
+                            {testimonial.role}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious data-carousel-prev />
+            <CarouselNext data-carousel-next />
+          </Carousel>
+        </div>
       </div>
     </section>
   );

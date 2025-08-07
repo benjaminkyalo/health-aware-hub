@@ -149,7 +149,7 @@ const BookingConsultation = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Left Side */}
           <div className="space-y-8">
-            <Card className="bg-blue-600 text-white border-none shadow-lg">
+            <Card className="bg-cyan-50 text-white border-none shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl text-center">
                   Why Patients Trust Our Care
@@ -167,7 +167,7 @@ const BookingConsultation = () => {
                       <h3 className="text-lg font-semibold mb-2">
                         {feature.title}
                       </h3>
-                      <p className="text-white/90 leading-relaxed">
+                      <p className="text-gray-600 leading-relaxed">
                         {feature.description}
                       </p>
                     </div>
@@ -176,7 +176,7 @@ const BookingConsultation = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-blue-50 border-blue-100 shadow-lg">
+            <Card className="bg-cyan-50 border-cyan-100 shadow-lg">
               <CardHeader>
                 <CardTitle className="text-xl text-center text-gray-900">
                   What Our Patients Say
@@ -224,7 +224,7 @@ const BookingConsultation = () => {
                         onChange={handleInputChange}
                         placeholder="Enter your full name"
                         required
-                        className="border-gray-300 focus:border-blue-600"
+                        className="border-gray-300 focus:border-cyan-600"
                       />
                     </div>
 
@@ -238,7 +238,7 @@ const BookingConsultation = () => {
                         onChange={handleInputChange}
                         placeholder="Enter your email address"
                         required
-                        className="border-gray-300 focus:border-blue-600"
+                        className="border-gray-300 focus:border-cyan-600"
                       />
                     </div>
 
@@ -251,17 +251,17 @@ const BookingConsultation = () => {
                         onChange={handleInputChange}
                         placeholder="Enter your WhatsApp number"
                         required
-                        className="border-gray-300 focus:border-blue-600"
+                        className="border-gray-300 focus:border-cyan-600"
                       />
                     </div>
 
-                    <div className="space-y-2">
+                   <div className="space-y-2">
                       <Label className="text-gray-900">Preferred Communication Language *</Label>
                       <Select onValueChange={handleSelectChange} required>
-                        <SelectTrigger className="border-gray-300 focus:border-blue-600">
+                        <SelectTrigger className="border-gray-300 focus:border-cyan-600">
                           <SelectValue placeholder="Select your preferred language" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="bg-cyan-500 border border-gray-300 text-white ">
                           <SelectItem value="english">English</SelectItem>
                           <SelectItem value="spanish">Spanish</SelectItem>
                           <SelectItem value="french">French</SelectItem>
@@ -271,6 +271,7 @@ const BookingConsultation = () => {
                         </SelectContent>
                       </Select>
                     </div>
+
 
                     <div className="space-y-2">
                       <Label htmlFor="symptoms" className="text-gray-900">Medical Concerns *</Label>
@@ -286,7 +287,7 @@ const BookingConsultation = () => {
                       />
                     </div>
 
-                    <Button type="submit" variant="medical" size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200">
+                    <Button type="submit" variant="medical" size="lg" className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200">
                       Continue to Payment
                     </Button>
                   </div>

@@ -50,7 +50,7 @@ const Homepage = () => {
                 alt="Medical consultation" 
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/80"></div>
+              <div className="absolute inset-0 bg-cyan-500/40"></div>
             </div>
             
             <div className="relative container mx-auto px-4 py-24 lg:py-32">
@@ -62,14 +62,7 @@ const Homepage = () => {
                   Connect with certified medical professionals for expert healthcare guidance. 
                   Fast, confidential, and comprehensive medical consultations.
                 </p>
-                <Button 
-                  variant="medical" 
-                  size="xl" 
-                  onClick={() => navigate("/doctor-discovery")}
-                  className="shadow-elevated bg-white text-blue-600 hover:bg-gray-50 font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
-                >
-                  Find Your Doctor
-                </Button>
+                  <a className="shadow-elevated bg-white text-cyan-600 hover:bg-gray-50 font-semibold px-8 py-4 rounded-lg transition-colors duration-200" href="/doctor-discovery">Find Your Doctor</a> 
               </div>
             </div>
           </section>
@@ -91,8 +84,8 @@ const Homepage = () => {
                 {features.map((feature, index) => (
                   <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 bg-white border-gray-200">
                     <CardContent className="p-8">
-                      <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full mb-6">
-                        <feature.icon className="w-8 h-8 text-blue-600" />
+                      <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-50 rounded-full mb-6">
+                        <feature.icon className="w-8 h-8 text-cyan-500" />
                       </div>
                       <h3 className="text-xl font-semibold mb-4 text-gray-900">
                         {feature.title}
@@ -122,7 +115,7 @@ const Homepage = () => {
                 size="xl" 
                 onClick={scrollToTop}
                 
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
+                className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
               >
                <a href="/contact">Get Started Now</a> 
               </Button>

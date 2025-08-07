@@ -71,9 +71,9 @@ const Diabetes = () => {
                 This condition affects how your body processes glucose, the primary source of energy for cellular functions.
               </p>
               
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <div className="bg-blue-50 border border-blue-100 rounded-lg p-6">
                 <h3 className="text-xl font-semibold medical-heading mb-4 flex items-center">
-                  <Target className="h-5 w-5 text-blue-600 mr-2" />
+                  <Target className="h-5 w-5 text-cyan-500 mr-2" />
                   Global Impact & Statistics
                 </h3>
                 <div className="space-y-3 medical-text-light">

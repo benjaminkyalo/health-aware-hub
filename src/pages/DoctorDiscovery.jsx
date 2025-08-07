@@ -86,7 +86,7 @@ const DoctorDiscovery = () => {
                 {practiceHighlights.map((highlight, index) => (
                   <div key={index} className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-500 rounded-full">
                         <highlight.icon className="w-6 h-6 text-white" />
                       </div>
                     </div>
@@ -145,7 +145,7 @@ const DoctorDiscovery = () => {
                           </span>
                         </div>
                       </div>
-                      <p className="text-blue-600 font-medium mb-1">
+                      <p className="text-cyan-500 font-medium mb-1">
                         {doctor.credentials}
                       </p>
                       <p className="text-gray-600 mb-2">
@@ -158,7 +158,7 @@ const DoctorDiscovery = () => {
                         variant="medical" 
                         size="lg"
                         onClick={() => navigate(`/booking/${doctor.id}`)}
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
+                        className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
                       >
                         Book {doctor.name.split(' ')[1]}
                       </Button>

@@ -209,13 +209,13 @@ const Blog = () => {
           <div className="max-w-4xl mx-auto">
             <button 
               onClick={() => setSelectedArticle(null)}
-              className="mb-6 text-blue-600 hover:text-blue-800 flex items-center gap-2"
+              className="mb-6 text-cyan-500 hover:text-cyan-600flex items-center gap-2"
             >
               ← Back to Blog
             </button>
             
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+              <span className="bg-blue-100 text-cyan-500 px-3 py-1 rounded-full text-sm font-medium">
                 {selectedArticle.category}
               </span>
               <span className="text-sm text-gray-600">{selectedArticle.readTime}</span>
@@ -263,7 +263,7 @@ const Blog = () => {
                 placeholder="Search health articles..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
 
@@ -272,13 +272,13 @@ const Blog = () => {
               {filteredArticles.map((article) => (
                 <article key={article.id} className="border-b border-gray-200 pb-8 last:border-b-0">
                   <div className="flex items-center gap-4 mb-3">
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-blue-100 text-cyan-500 px-3 py-1 rounded-full text-sm font-medium">
                       {article.category}
                     </span>
                     <span className="text-sm text-gray-600">{article.readTime}</span>
                   </div>
 
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 hover:text-blue-600 transition-colors duration-200">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-4 hover:text-cyan-500 transition-colors duration-200">
                     <button 
                       onClick={() => {
                         setSelectedArticle(article);
@@ -299,7 +299,7 @@ const Blog = () => {
                       setSelectedArticle(article);
                       window.scrollTo(0, 0);
                     }}
-                    className="text-blue-600 hover:text-blue-800 font-medium"
+                    className="text-cyan-500 hover:text-cyan-600 font-medium"
                   >
                     Read Full Article →
                   </button>
@@ -328,7 +328,7 @@ const Blog = () => {
                         setSelectedArticle(articles.find(a => a.title === post));
                         window.scrollTo(0, 0);
                       }}
-                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm leading-relaxed text-left"
+                      className="text-gray-600 hover:text-cyan-500 transition-colors duration-200 text-sm leading-relaxed text-left"
                     >
                       {post}
                     </button>
@@ -341,12 +341,12 @@ const Blog = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-6">Health Categories</h3>
               <ul className="space-y-3">
                 <li>
-                  <button className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <button className="text-gray-600 hover:text-cyan-500 transition-colors duration-200">
                     Heart Health (3 articles)
                   </button>
                 </li>
                 <li>
-                  <button className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <button className="text-gray-600 hover:text-cyan-500 transition-colors duration-200">
                     Diabetes Care (2 articles)
                   </button>
                 </li>
@@ -356,19 +356,19 @@ const Blog = () => {
                   </button>
                 </li>
                 <li>
-                  <button className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <button className="text-gray-600 hover:text-cyan-600 transition-colors duration-200">
                     General Health (1 article)
                   </button>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-blue-600 text-white p-6 rounded-lg mt-8 text-center">
+            <div className="bg-cyan-500 text-white p-6 rounded-lg mt-8 text-center">
               <h3 className="text-lg font-semibold mb-3">Health Newsletter</h3>
               <p className="text-sm mb-4 opacity-90">
                 Get weekly health tips and updates delivered to your inbox.
               </p>
-              <button className="bg-white text-blue-600 px-4 py-2 rounded font-medium text-sm hover:bg-gray-100 transition-colors duration-200">
+              <button className="bg-white text-cyan-500 px-4 py-2 rounded font-medium text-sm hover:bg-gray-100 transition-colors duration-200">
                 Subscribe Now
               </button>
             </div>

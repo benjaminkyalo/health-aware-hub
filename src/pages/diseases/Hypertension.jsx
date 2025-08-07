@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 const Hypertension = () => {
   return (
     <div className="min-h-screen bg-background">
+      <div className="bg-cyan-500 text-white p-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-xl font-semibold">Healthcare Portal</h1>
+        </div>
+      </div>
       
       
       {/* Breadcrumb */}
@@ -357,15 +362,16 @@ const Hypertension = () => {
           </section>
 
           {/* CTA */}
-          <div className="bg-primary rounded-lg p-8 text-center text-white">
+          <div className="bg-cyan-500 rounded-lg p-8 text-center text-white">
             <h3 className="text-2xl font-semibold mb-4">Need Personalized Hypertension Care?</h3>
             <p className="mb-6 text-lg">
-              Connect with qualified healthcare professionals who specialize in hypertension management 
+               Connect with qualified healthcare professionals who specialize in hypertension management 
               and can provide personalized treatment plans.
             </p>
-            <Button className="bg-white text-primary hover:bg-gray-100 medical-transition">
-              Schedule Consultation
-            </Button>
+          <button className="bg-white text-cyan-500 hover:bg-gray-100 transition-colors px-6 py-2 rounded-lg font-medium">
+              <a href="/doctor-discovery">Schedule Consultation</a>
+              
+            </button>
           </div>
 
         </div>

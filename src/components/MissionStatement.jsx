@@ -49,8 +49,8 @@ const MissionStatement = () => {
             const IconComponent = value.icon;
             return (
               <div key={index} className="text-center">
-                <div className="mx-auto w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4 shadow-sm">
-                  <IconComponent className="h-8 w-8 text-teal-600" />
+                <div className="mx-auto w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mb-4 shadow-sm">
+                  <IconComponent className="h-8 w-8 text-cyan-100" />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-800 mb-3">
                   {value.title}

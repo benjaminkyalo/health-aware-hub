@@ -7,7 +7,7 @@ const Obesity = () => {
   return (
     <div className="min-h-screen bg-background">
      
-      <div className="bg-blue-600 text-white p-4">
+      <div className="bg-cyan-500 text-white p-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-xl font-semibold">Healthcare Portal</h1>
         </div>
@@ -30,7 +30,7 @@ const Obesity = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Back Button */}
-          <a href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors mb-6">
+          <a href="/" className="inline-flex items-center text-cyan-500 hover:text-blue-800 transition-colors mb-6">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Weight Management Topics
           </a>
@@ -91,12 +91,12 @@ const Obesity = () => {
               <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <h4 className="font-semibold text-blue-900 mb-2">Calculate Your BMI</h4>
-                    <p className="text-blue-700 text-sm">
+                    <h4 className="font-semibold text-cyan-500 mb-2">Calculate Your BMI</h4>
+                    <p className="text-cyan-500 text-sm">
                       Use our BMI calculator to determine your current BMI category and assess your weight status.
                     </p>
                   </div>
-                  <button className="bg-blue-600 text-white hover:bg-blue-700 transition-colors px-4 py-2 rounded-lg">
+                  <button className="bg-cyan-500 text-white hover:bg-cyan-600 transition-colors px-4 py-2 rounded-lg">
                     
                     <a href="/bmi-calculator" className="flex items-center space-x-2">BMI Calculator</a>
                   </button>
@@ -290,12 +290,12 @@ const Obesity = () => {
           </section>
 
           {/* CTA */}
-          <div className="bg-blue-600 rounded-lg p-8 text-center text-white">
+          <div className="bg-cyan-500 rounded-lg p-8 text-center text-white">
             <h3 className="text-2xl font-semibold mb-4">Ready to Start Your Weight Management Journey?</h3>
             <p className="mb-6 text-lg">
               Connect with qualified healthcare professionals who specialize in obesity management and can provide personalized treatment plans tailored to your needs.
             </p>
-            <button className="bg-white text-blue-600 hover:bg-gray-100 transition-colors px-6 py-2 rounded-lg font-medium">
+            <button className="bg-white text-cyan-500 hover:bg-gray-100 transition-colors px-6 py-2 rounded-lg font-medium">
               Find a Weight Management Specialist
             </button>
           </div>

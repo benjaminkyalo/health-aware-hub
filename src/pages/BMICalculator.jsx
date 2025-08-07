@@ -82,7 +82,7 @@ const BMICalculator = () => {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold flex justify-center items-center gap-2 text-gray-900">
-            <Scale className="text-blue-600" />
+            <Scale className="text-cyan-500" />
             BMI Calculator
           </h1>
           <p className="text-gray-600 mt-2">
@@ -94,7 +94,7 @@ const BMICalculator = () => {
           {/* Input Form */}
           <div className="bg-white/80 rounded-xl shadow-lg p-6 backdrop-blur-md">
             <h2 className="text-xl font-semibold flex items-center gap-2 mb-6">
-              <Activity className="text-blue-600" /> Your Measurements
+              <Activity className="text-cyan-500" /> Your Measurements
             </h2>
 
             <div className="mb-4">
@@ -131,7 +131,7 @@ const BMICalculator = () => {
             <div className="flex gap-4">
               <button
                 onClick={calculateBMI}
-                className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                className="flex items-center gap-2 bg-cyan-500 text-white px-4 py-2 rounded hover:bg-blue-700"
               >
                 <Target size={16} /> Calculate BMI
               </button>

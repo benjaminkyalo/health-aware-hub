@@ -4,7 +4,7 @@ const HivAids = () => {
   return (
     <div className="min-h-screen bg-background">
      
-      <div className="bg-blue-600 text-white p-4">
+      <div className="bg-cyan-500 text-white p-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-xl font-semibold">Healthcare Portal</h1>
         </div>
@@ -16,7 +16,7 @@ const HivAids = () => {
           <div className="flex items-center space-x-2 text-sm text-gray-600">
             <a href="/" className="hover:text-blue-600 transition-colors">Home</a>
             <span>/</span>
-            <a href="/" className="hover:text-blue-600 transition-colors">Health Topics</a>
+            <a href="/" className="hover:text-cyan-600 transition-colors">Health Topics</a>
             <span>/</span>
             <span className="text-gray-900">HIV & AIDS</span>
           </div>
@@ -27,7 +27,7 @@ const HivAids = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Back Button */}
-          <a href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors mb-6">
+          <a href="/" className="inline-flex items-center text-cyan-500 hover:text-cyan-600 transition-colors mb-6">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Health Topics
           </a>
@@ -249,13 +249,14 @@ const HivAids = () => {
           </section>
 
           {/* CTA */}
-          <div className="bg-blue-600 rounded-lg p-8 text-center text-white">
+          <div className="bg-cyan-500 rounded-lg p-8 text-center text-white">
             <h3 className="text-2xl font-semibold mb-4">Need Personalized HIV Support?</h3>
             <p className="mb-6 text-lg">
               Connect with qualified healthcare professionals who specialize in HIV care and can provide tailored prevention and treatment plans.
             </p>
-            <button className="bg-white text-blue-600 hover:bg-gray-100 transition-colors px-6 py-2 rounded-lg font-medium">
-              Schedule Consultation
+            <button className="bg-white text-cyan-500 hover:bg-gray-100 transition-colors px-6 py-2 rounded-lg font-medium">
+              <a href="/doctor-discovery">Schedule Consultation</a>
+              
             </button>
           </div>
 
