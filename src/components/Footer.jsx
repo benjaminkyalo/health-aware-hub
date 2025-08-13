@@ -61,7 +61,7 @@ const Footer = () => {
               
               <div className="flex items-center gap-2 text-white/80">
                 <MapPin className="h-4 w-4" />
-                <span>Health Education Center, USA</span>
+                <span>Main Street, Valley Mills, TX 76689, USA</span>
               </div>
             </div>
           </div>

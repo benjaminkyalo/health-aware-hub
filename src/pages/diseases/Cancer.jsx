@@ -40,7 +40,7 @@ const Cancer = () => {
             <div className="flex items-center space-x-4 text-sm text-gray-600">
               <div className="flex items-center">
                 <Calendar className="h-4 w-4 mr-2" />
-                <span>Last updated: January 2024</span>
+                <span>Last updated: July 2025</span>
               </div>
               <div className="flex items-center">
                 <AlertCircle className="h-4 w-4 mr-2" />

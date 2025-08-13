@@ -192,9 +192,7 @@ const Contact = () => {
                 </h3>
                 <address className="text-muted-foreground not-italic leading-relaxed">
                   Health Aware Hub<br />
-                  123 Wellness Street<br />
-                  Medical District<br />
-                  Healthcare City, HC 12345<br />
+                  Bosque County, Texas<br />
                   United States
                 </address>
               </div>
