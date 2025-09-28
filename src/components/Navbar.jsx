@@ -1,19 +1,43 @@
 import { useState } from 'react';
-import { Menu, X, ChevronDown, Stethoscope } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(false);
 
-  const diseasePages = [
-    { name: 'HIV & AIDS', path: '/diseases/hiv-aids' },
-    { name: 'Diabetes', path: '/diseases/diabetes' },
-    { name: 'Obesity', path: '/diseases/obesity' },
-    { name: 'Cancer', path: '/diseases/cancer' },
-    { name: 'Depression', path: '/diseases/depression' },
-    { name: 'High Blood Pressure', path: '/diseases/hypertension' },
-  ];
+  const diseaseCategories = {
+    "Infectious Diseases": [
+      { name: 'HIV & AIDS', path: '/diseases/hiv-aids' },
+      { name: 'Malaria', path: '/diseases/malaria' },
+      { name: 'Tuberculosis', path: '/diseases/tuberculosis' },
+      { name: 'Hepatitis', path: '/diseases/hepatitis' },
+      { name: 'COVID-19', path: '/diseases/covid-19' },
+      { name: 'Pneumonia', path: '/diseases/pneumonia' },
+      { name: 'Influenza', path: '/diseases/influenza' },
+      { name: 'Dengue Fever', path: '/diseases/dengue' }
+    ],
+    "Chronic Conditions": [
+      { name: 'Diabetes', path: '/diseases/diabetes' },
+      { name: 'High Blood Pressure', path: '/diseases/hypertension' },
+      { name: 'Heart Disease', path: '/diseases/heart-disease' },
+      { name: 'Kidney Disease', path: '/diseases/kidney-disease' },
+      { name: 'Asthma', path: '/diseases/asthma' },
+      { name: 'COPD', path: '/diseases/copd' },
+      { name: 'Arthritis', path: '/diseases/arthritis' },
+      { name: 'Osteoporosis', path: '/diseases/osteoporosis' }
+    ],
+    "Mental Health & Cancer": [
+      { name: 'Depression', path: '/diseases/depression' },
+      { name: 'Anxiety Disorders', path: '/diseases/anxiety' },
+      { name: 'Bipolar Disorder', path: '/diseases/bipolar' },
+      { name: 'Breast Cancer', path: '/diseases/breast-cancer' },
+      { name: 'Lung Cancer', path: '/diseases/lung-cancer' },
+      { name: 'Colorectal Cancer', path: '/diseases/colorectal-cancer' },
+      { name: 'Prostate Cancer', path: '/diseases/prostate-cancer' },
+      { name: 'Obesity', path: '/diseases/obesity' }
+    ]
+  };
 
   return (
     <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-lg">
@@ -31,32 +55,64 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="/"
-              className="transition-colors duration-200 font-medium text-teal-600 border-b-2 border-teal-600"
+              className="transition-colors duration-200 font-medium text-cyan-600 border-b-2 border-cyan-600"
             >
               Home
             </a>
 
-            {/* Topics Dropdown */}
-            <div className="relative">
-              <button 
-                className="flex items-center space-x-1 text-slate-700 hover:text-teal-600 transition-colors duration-200 font-medium"
-                onClick={() => setActiveDropdown(!activeDropdown)}
-              >
+            {/* Topics Mega Menu Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setActiveDropdown(true)}
+              onMouseLeave={() => setActiveDropdown(false)}
+            >
+              <button className="flex items-center space-x-1 text-slate-700 hover:text-cyan-600 transition-colors duration-200 font-medium">
                 <span>Topics</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
+              
               {activeDropdown && (
-                <div className="absolute top-full mt-1 w-56 bg-white border border-slate-200 shadow-lg rounded-md py-1">
-                  {diseasePages.map((disease) => (
-                    <a
-                      key={disease.path}
-                      href={disease.path}
-                      className="block w-full px-3 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-700 transition-colors duration-200"
-                      onClick={() => setActiveDropdown(false)}
-                    >
-                      {disease.name}
-                    </a>
-                  ))}
+                <div className="absolute top-full mt-1 w-[800px] -left-96 bg-white border border-slate-200 shadow-xl rounded-lg py-6 px-8">
+                  <div className="grid grid-cols-3 gap-8">
+                    {Object.entries(diseaseCategories).map(([category, diseases]) => (
+                      <div key={category} className="space-y-4">
+                        <h3 className="text-lg font-semibold text-slate-800 border-b border-slate-200 pb-2">
+                          {category}
+                        </h3>
+                        <div className="space-y-2">
+                          {diseases.map((disease) => (
+                            <a
+                              key={disease.path}
+                              href={disease.path}
+                              className="block text-sm text-slate-600 hover:text-cyan-600 hover:bg-cyan-50 px-3 py-2 rounded-md transition-all duration-200"
+                            >
+                              {disease.name}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Bottom section with additional links */}
+                  <div className="mt-8 pt-6 border-t border-slate-200">
+                    <div className="flex justify-between items-center">
+                      <div className="flex space-x-6">
+                        <a href="/health-tips" className="text-sm text-cyan-600 hover:text-cyan-500 font-medium">
+                          Health Tips & Prevention
+                        </a>
+                        <a href="/symptoms-checker" className="text-sm text-cyan-600 hover:text-cyan-500 font-medium">
+                          Symptoms Checker
+                        </a>
+                        <a href="/wellness" className="text-sm text-cyan-600 hover:text-cyan-500 font-medium">
+                          Wellness & Lifestyle
+                        </a>
+                      </div>
+                      <Button size="sm" className="bg-cyan-500 hover:bg-cyan-600 text-white">
+                        View All Topics
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -84,7 +140,6 @@ const Navbar = () => {
 
             <Button className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
               <a href="/homepage" className="flex items-center space-x-2">Consult Doctor</a>
-              
             </Button>
           </div>
 
@@ -111,20 +166,28 @@ const Navbar = () => {
                 Home
               </a>
               
-              <div className="space-y-2">
-                <span className="block text-slate-700 font-medium">Topics</span>
-                <div className="pl-4 space-y-2">
-                  {diseasePages.map((disease) => (
-                    <a
-                      key={disease.path}
-                      href={disease.path}
-                      className="block text-sm text-slate-600 hover:text-teal-600 transition-colors duration-200"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {disease.name}
-                    </a>
-                  ))}
-                </div>
+              {/* Mobile Topics Section */}
+              <div className="space-y-3">
+                <span className="block text-slate-700 font-medium text-lg">Topics</span>
+                {Object.entries(diseaseCategories).map(([category, diseases]) => (
+                  <div key={category} className="space-y-2">
+                    <h4 className="text-sm font-semibold text-slate-600 pl-2 border-l-2 border-teal-400">
+                      {category}
+                    </h4>
+                    <div className="pl-4 space-y-1">
+                      {diseases.map((disease) => (
+                        <a
+                          key={disease.path}
+                          href={disease.path}
+                          className="block text-sm text-slate-600 hover:text-teal-600 transition-colors duration-200 py-1"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {disease.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
 
               <a

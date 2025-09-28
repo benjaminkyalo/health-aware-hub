@@ -136,16 +136,16 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <span className="text-white/80 text-sm">Follow us:</span>
               <div className="flex gap-3">
-                <a href="#" className="text-white/60 hover:text-white transition-colors">
+                <a href="https://facebook.com/groups/1938718400316010/" className="text-white/60 hover:text-white transition-colors">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-white/60 hover:text-white transition-colors">
+                <a href="https://x.com/4K_Omnivers?t=upaIWaSbzZGLm6dxgRDMdA&s=08" className="text-white/60 hover:text-white transition-colors">
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-white/60 hover:text-white transition-colors">
+                <a href="https://www.instagram.com/health_awarehub?igsh=MXRsenlneW1ucGh0ZA==" className="text-white/60 hover:text-white transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-white/60 hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/groups/11802317/" className="text-white/60 hover:text-white transition-colors">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </div>
