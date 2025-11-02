@@ -13,6 +13,8 @@ const Blog = () => {
       readTime: "10 min read",
       author: "Dr. Sarah Johnson",
       date: "25th October 2025",
+      image: {
+        url: "https://res.cloudinary.com/dkcqakosa/image/upload/v1762114906/ISCHAEMIC_HEART_DISEASE_vx7mlw.png"},
       content: `
         <h3>What is Ischaemic Heart Disease?</h3>
         <p>Ischaemic heart disease (IHD), also called coronary artery disease, occurs when plaque builds up in the arteries supplying blood to the heart. This is the leading cause of death globally, responsible for over 9 million deaths annually.</p>
@@ -37,6 +39,7 @@ const Blog = () => {
         <p><em>Important: Call emergency services immediately if you experience chest pain or heart attack symptoms. Time is critical for preserving heart muscle.</em></p>
       `
     },
+
     {
       id: 2,
       title: "Stroke: Recognizing Signs and Acting FAST Saves Lives",
@@ -45,6 +48,8 @@ const Blog = () => {
       readTime: "8 min read",
       author: "Dr. Michael Chen",
       date: "22nd October 2025",
+      image: {
+        url: "https://res.cloudinary.com/dkcqakosa/image/upload/v1762114907/STROKE.jpg_wltss4.png"},
       content: `
         <h3>Understanding Stroke</h3>
         <p>A stroke occurs when blood supply to part of the brain is interrupted or reduced, depriving brain tissue of oxygen and nutrients. Every minute counts—brain cells begin dying within minutes.</p>
@@ -77,6 +82,8 @@ const Blog = () => {
       readTime: "9 min read",
       author: "Dr. Emily Roberts",
       date: "20th October 2025",
+      image: {
+        url: "https://res.cloudinary.com/dkcqakosa/image/upload/v1762114905/copd.jpg_bkhlqh.png"},
       content: `
         <h3>What is COPD?</h3>
         <p>COPD is a group of progressive lung diseases including emphysema and chronic bronchitis that block airflow and make breathing difficult. It's the third leading cause of death worldwide, affecting over 300 million people.</p>
@@ -111,6 +118,8 @@ const Blog = () => {
       readTime: "7 min read",
       author: "Dr. James Wilson",
       date: "18th October 2025",
+      image: {
+        url: "https://res.cloudinary.com/dkcqakosa/image/upload/v1762114906/lower_respirotary_infections.jpg_hvrqyl.png"},
       content: `
         <h3>Types of Lower Respiratory Infections</h3>
         <p>Lower respiratory infections affect the lungs and airways below the voice box. Pneumonia and bronchitis are most common, causing over 2.5 million deaths annually worldwide, particularly in children under 5 and adults over 65.</p>
@@ -146,6 +155,8 @@ const Blog = () => {
       readTime: "11 min read",
       author: "Dr. Lisa Martinez",
       date: "15th October 2025",
+      image: {
+        url: "https://res.cloudinary.com/dkcqakosa/image/upload/v1762114908/lung_cancer.JPG_ggbj1a.png"},
       content: `
         <h3>Global Impact</h3>
         <p>Lung cancer causes more deaths than breast, colon, and prostate cancers combined, with approximately 1.8 million deaths annually worldwide. Early detection dramatically improves survival rates.</p>
@@ -183,6 +194,8 @@ const Blog = () => {
       readTime: "10 min read",
       author: "Dr. Robert Kim",
       date: "12th October 2025",
+      image: {
+        url: "https://res.cloudinary.com/dkcqakosa/image/upload/v1762114906/dementias.JPG_t7uff8.png"},
       content: `
         <h3>Understanding Dementia</h3>
         <p>Dementia describes symptoms affecting memory, thinking, and social abilities severely enough to interfere with daily life. Alzheimer's disease accounts for 60-80% of dementia cases, affecting over 55 million people worldwide.</p>
@@ -223,6 +236,8 @@ const Blog = () => {
       readTime: "9 min read",
       author: "Dr. Patricia Lee",
       date: "10th October 2025",
+      image: {
+        url: "https://res.cloudinary.com/dkcqakosa/image/upload/v1762114906/diabetes.JPG_vjrpz5.png"},
       content: `
         <h3>Types of Diabetes</h3>
         <p>Diabetes affects over 530 million adults globally. The body either doesn't produce enough insulin or can't effectively use the insulin it produces, leading to elevated blood sugar levels.</p>
@@ -260,7 +275,10 @@ const Blog = () => {
       category: "Renal Health",
       readTime: "8 min read",
       author: "Dr. David Chang",
+
       date: "8th October 2025",
+      image: {
+        url: "https://res.cloudinary.com/dkcqakosa/image/upload/v1762114905/kidney.JPG_cgwlb7.png"},
       content: `
         <h3>Understanding Kidney Disease</h3>
         <p>Chronic kidney disease (CKD) affects over 850 million people worldwide. Kidneys gradually lose ability to filter waste and excess fluid from blood, often progressing over many years without symptoms.</p>
@@ -298,6 +316,8 @@ const Blog = () => {
       readTime: "10 min read",
       author: "Dr. Rachel Foster",
       date: "5th October 2025",
+      image: {
+        url: "https://res.cloudinary.com/dkcqakosa/image/upload/v1762114907/covid_19.JPG_gujgsz.png"},
       content: `
         <h3>Current Landscape</h3>
         <p>COVID-19 has caused over 7 million reported deaths globally since 2020. While no longer a global health emergency, the virus continues circulating with evolving variants requiring ongoing vigilance.</p>
@@ -335,6 +355,8 @@ const Blog = () => {
       readTime: "9 min read",
       author: "Dr. Ahmed Hassan",
       date: "3rd October 2025",
+      image: {
+        url: "https://res.cloudinary.com/dkcqakosa/image/upload/v1762114909/tbuberclosis.JPG_bkh1no.png"},
       content: `
         <h3>Global Burden</h3>
         <p>Tuberculosis (TB) caused 1.3 million deaths in 2022, making it one of the top infectious disease killers after COVID-19. About one-quarter of the world's population has latent TB infection.</p>
@@ -373,6 +395,8 @@ const Blog = () => {
       readTime: "10 min read",
       author: "Dr. Maria Santos",
       date: "1st October 2025",
+      image: {
+        url: "https://res.cloudinary.com/dkcqakosa/image/upload/v1762114906/hiv_and_aids_pu0rcs.jpg"},
       content: `
         <h3>Current Status</h3>
         <p>Approximately 39 million people live with HIV globally. While 29 million receive antiretroviral therapy, 630,000 AIDS-related deaths occurred in 2022. Early diagnosis and treatment prevent progression to AIDS.</p>
@@ -418,6 +442,8 @@ const Blog = () => {
       readTime: "8 min read",
       author: "Dr. Kwame Mensah",
       date: "28th September 2025",
+      image: {
+        url: "https://res.cloudinary.com/dkcqakosa/image/upload/v1762114907/malaria_oj47bm.jpg"},
       content: `
         <h3>Global Impact</h3>
         <p>Malaria caused 608,000 deaths in 2022, with 96% occurring in Africa. Children under 5 account for 80% of malaria deaths. This preventable and treatable disease continues devastating communities.</p>
@@ -464,13 +490,13 @@ const Blog = () => {
           <div className="max-w-4xl mx-auto">
             <button 
               onClick={() => setSelectedArticle(null)}
-              className="mb-6 text-green-600 hover:text-green-700 flex items-center gap-2 transition-colors duration-200"
+              className="mb-6 text-cyan-600 hover:text-cyan-700 flex items-center gap-2 transition-colors duration-200"
             >
               ← Back to Blog
             </button>
             
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+              <span className="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm font-medium">
                 {selectedArticle.category}
               </span>
               <span className="text-sm text-gray-600">{selectedArticle.readTime}</span>
@@ -515,7 +541,7 @@ const Blog = () => {
             placeholder="Search health articles..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-6 py-4 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent shadow-sm transition-all duration-300 focus:shadow-lg transform focus:scale-105"
+            className="w-full px-6 py-4 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent shadow-sm transition-all duration-300 focus:shadow-lg transform focus:scale-105"
           />
         </div>
 
@@ -530,16 +556,16 @@ const Blog = () => {
                 window.scrollTo(0, 0);
               }}
             >
-              {/* Article Image with Green Overlay */}
-              <div className="relative h-48 bg-gradient-to-br from-green-500 to-green-600 overflow-hidden">
+              {/* Article Image with cyan Overlay */}
+              <div className="relative h-48 overflow-hidden">
                 <img 
-                  src="https://res.cloudinary.com/drq4idzdj/image/upload/v1750191909/pexels-cottonbro-7579831_zf7blw.jpg"
+                  src={article.image.url}
                   alt={article.title}
                   className="w-full h-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-green-600 bg-opacity-20 transition-opacity duration-300 group-hover:bg-opacity-30"></div>
+                
                 <div className="absolute top-4 left-4 transform transition-transform duration-300 group-hover:scale-110">
-                  <span className="bg-white text-green-600 px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                  <span className="bg-white text-cyan-600 px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                     {article.category}
                   </span>
                 </div>
@@ -547,7 +573,7 @@ const Blog = () => {
 
               {/* Article Content */}
               <div className="p-6 transition-all duration-300 group-hover:bg-gray-50">
-                <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 leading-tight transition-colors duration-300 group-hover:text-green-600">
+                <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 leading-tight transition-colors duration-300 group-hover:text-cyan-600">
                   {article.title}
                 </h2>
 
@@ -558,13 +584,13 @@ const Blog = () => {
                 {/* Author and Date */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-green-600 group-hover:scale-110">
+                    <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-cyan-600 group-hover:scale-110">
                       <span className="text-xs font-semibold text-white">
                         {article.author ? article.author.split(' ').map(name => name[0]).join('') : 'HE'}
                       </span>
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-gray-900 transition-colors duration-300 group-hover:text-green-700">
+                      <p className="text-sm font-semibold text-gray-900 transition-colors duration-300 group-hover:text-cyan-700">
                         by {article.author || 'Health Expert'}
                       </p>
                       <p className="text-xs text-gray-500 transition-colors duration-300">
@@ -572,7 +598,7 @@ const Blog = () => {
                       </p>
                     </div>
                   </div>
-                  <span className="text-xs text-gray-500 font-medium transition-colors duration-300 group-hover:text-green-600">
+                  <span className="text-xs text-gray-500 font-medium transition-colors duration-300 group-hover:text-cyan-600">
                     {article.readTime}
                   </span>
                 </div>
@@ -595,12 +621,12 @@ const Blog = () => {
         )}
 
         {/* Newsletter Section */}
-        <div className="mt-16 bg-green-600 text-white rounded-lg p-8 text-center transform transition-all duration-300 hover:bg-green-700 hover:scale-105">
+        <div className="mt-16 bg-cyan-600 text-white rounded-lg p-8 text-center transform transition-all duration-300 hover:bg-cyan-700 hover:scale-105">
           <h3 className="text-2xl font-bold mb-4">Stay Updated with Health Tips</h3>
           <p className="text-lg mb-6 opacity-90">
             Get weekly health insights and wellness updates delivered to your inbox.
           </p>
-          <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-110 hover:shadow-lg animate-pulse">
+          <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-110 hover:shadow-lg animate-pulse">
             Subscribe to Newsletter
           </button>
         </div>
