@@ -8,7 +8,10 @@ const HeroSection = () => {
   const slides = [
     "https://res.cloudinary.com/drq4idzdj/image/upload/v1750191909/pexels-cottonbro-7579831_zf7blw.jpg",
     "https://res.cloudinary.com/drq4idzdj/image/upload/v1753187601/pexels-karolina-grabowska-4386470_krlmdx.jpg",
-    "https://res.cloudinary.com/drq4idzdj/image/upload/v1753187601/pexels-shkrabaanthony-5215001_vt01jb.jpg"
+    "https://res.cloudinary.com/drq4idzdj/image/upload/v1753187601/pexels-shkrabaanthony-5215001_vt01jb.jpg",
+    "https://res.cloudinary.com/dkcqakosa/image/upload/v1762119258/health_02_hps4e1.png",
+    "https://res.cloudinary.com/dkcqakosa/image/upload/v1762119257/health_01_vg6app.png",
+    "https://res.cloudinary.com/dkcqakosa/image/upload/v1762119257/health_03_e3pqy6.png"
   ];
 
   const nextSlide = () => {
