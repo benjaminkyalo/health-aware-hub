@@ -9,32 +9,16 @@ const Navbar = () => {
   const diseaseCategories = {
     "Infectious Diseases": [
       { name: 'HIV & AIDS', path: '/diseases/hiv-aids' },
-      { name: 'Malaria', path: '/diseases/malaria' },
-      { name: 'Tuberculosis', path: '/diseases/tuberculosis' },
-      { name: 'Hepatitis', path: '/diseases/hepatitis' },
-      { name: 'COVID-19', path: '/diseases/covid-19' },
-      { name: 'Pneumonia', path: '/diseases/pneumonia' },
-      { name: 'Influenza', path: '/diseases/influenza' },
-      { name: 'Dengue Fever', path: '/diseases/dengue' }
+      
     ],
     "Chronic Conditions": [
       { name: 'Diabetes', path: '/diseases/diabetes' },
       { name: 'High Blood Pressure', path: '/diseases/hypertension' },
-      { name: 'Heart Disease', path: '/diseases/heart-disease' },
-      { name: 'Kidney Disease', path: '/diseases/kidney-disease' },
-      { name: 'Asthma', path: '/diseases/asthma' },
-      { name: 'COPD', path: '/diseases/copd' },
-      { name: 'Arthritis', path: '/diseases/arthritis' },
-      { name: 'Osteoporosis', path: '/diseases/osteoporosis' }
+      { name: 'Heart Disease', path: '/diseases/heart-disease' }
+      
     ],
     "Mental Health & Cancer": [
       { name: 'Depression', path: '/diseases/depression' },
-      { name: 'Anxiety Disorders', path: '/diseases/anxiety' },
-      { name: 'Bipolar Disorder', path: '/diseases/bipolar' },
-      { name: 'Breast Cancer', path: '/diseases/breast-cancer' },
-      { name: 'Lung Cancer', path: '/diseases/lung-cancer' },
-      { name: 'Colorectal Cancer', path: '/diseases/colorectal-cancer' },
-      { name: 'Prostate Cancer', path: '/diseases/prostate-cancer' },
       { name: 'Obesity', path: '/diseases/obesity' }
     ]
   };
@@ -94,25 +78,7 @@ const Navbar = () => {
                     ))}
                   </div>
                   
-                  {/* Bottom section with additional links */}
-                  <div className="mt-8 pt-6 border-t border-slate-200">
-                    <div className="flex justify-between items-center">
-                      <div className="flex space-x-6">
-                        <a href="/health-tips" className="text-sm text-cyan-600 hover:text-cyan-500 font-medium">
-                          Health Tips & Prevention
-                        </a>
-                        <a href="/symptoms-checker" className="text-sm text-cyan-600 hover:text-cyan-500 font-medium">
-                          Symptoms Checker
-                        </a>
-                        <a href="/wellness" className="text-sm text-cyan-600 hover:text-cyan-500 font-medium">
-                          Wellness & Lifestyle
-                        </a>
-                      </div>
-                      <Button size="sm" className="bg-cyan-500 hover:bg-cyan-600 text-white">
-                        View All Topics
-                      </Button>
-                    </div>
-                  </div>
+
                 </div>
               )}
             </div>
